@@ -16,3 +16,23 @@
  html body {
  	margin: 0;
  }
+
+ /*fonts used in body*/
+/*
+font-family: 'Open Sans', sans-serif;				<--- body text
+font-family: 'Source Sans Pro', sans-serif;	<--- headlines, decks
+font-family: 'Droid Serif', serif;					<--- special uses, maybe blockquotes
+ 	*/
+
+
+ 	#kc {
+ 		width: 200px;
+ 		height: 200px;
+ 		background: white;
+ 		color: black;
+ 		position: absolute;
+ 		top: 2em;
+ 		left: 50%;
+ 		margin-left = -100px
+ 		z-index: 9999;
+ 	}
