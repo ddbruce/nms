@@ -18,11 +18,12 @@
  	padding: 0;
  }
 
+
  /*fonts used in body*/
 /*
 font-family: 'Open Sans', sans-serif;				<--- body text (contains 400 and 700 weights in both straight and italics)
 font-family: 'Source Sans Pro', sans-serif;	<--- headlines, decks (contains 600 and 900 weights in both straight and italics)
-font-family: 'Droid Serif', serif;					<--- special uses, maybe blockquotes (contains 400 and 700 weights in both straigh and italics)
+font-family: 'Droid Serif', serif;					<--- special uses, maybe blockquotes (contains 400 and 700 weights in both straight and italics)
 
 link: https://www.google.com/fonts#UsePlace:use/Collection:Source+Sans+Pro:600,900,600italic,900italic|Droid+Serif:400,700,400italic,700italic|Open+Sans:400italic,700italic,400,700
 
