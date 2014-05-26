@@ -1,0 +1,32 @@
+#kc {
+	width: 300px;
+	background: rgba(230,230,230,.85);
+	color: black;
+	text-align: center;
+	position: absolute;
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 1em;
+	top: 2em;
+	left: 50%;
+	margin-left: -150px;
+	z-index: 9999;
+	font-family: "Source Sans Pro",sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+}
+
+#kc h2 {
+	font-size: 30px;
+	font-weight: 700;
+}
+
+#bggray {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.5);
+	z-index: 9998;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
