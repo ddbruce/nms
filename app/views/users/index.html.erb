@@ -1,0 +1,10 @@
+<!-- Test backend relations -->
+<% @users.each do |user| %>
+  <p> <b> Name: </b> <%= user.name %> </p>
+  <p> 
+    <b> Organizations: </b>
+    <% user.organizations.each do |org| %>
+      <%= org.title %>
+    <% end %>
+  </p>
+<% end %>
