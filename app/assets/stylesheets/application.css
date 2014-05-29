@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
  html, body, h1, h2, h3, h4, h5, h6 {
  	margin: 0;
  	padding: 0;
@@ -34,8 +35,6 @@ link: https://www.google.com/fonts#UsePlace:use/Collection:Source+Sans+Pro:600,9
 Poly red: #d81e05
 
 */
-
-
 
 #kc {
 	width: 300px;
@@ -81,3 +80,4 @@ a:visited {
 a:hover {
 	color: #a61704;
 }
+

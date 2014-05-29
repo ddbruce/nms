@@ -3,10 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #mast {
-        /*min-width: 100px;*/
-        margin-top: 1em;
-        margin-right: auto;
-        margin-left: auto;
-        text-align: center;
+  margin-top: 1em;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
 }
 
+#logo {
+  max-width: 600px;
+  max-width: 90vw;
+}
+
+body {
+  background-image: url(image_path('site/bg.png'));
+}
