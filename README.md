@@ -1,4 +1,4 @@
-poly
+nms
 ====
 
 A new, Rails-based website for The Rensselaer Polytechnic, the newspaper at Rensselaer Polytechnic Institute in Troy, New York.
