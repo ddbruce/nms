@@ -70,14 +70,6 @@ Poly red: #d81e05
 	left: 0;
 }
 
-#mast {
-	/*min-width: 100px;*/
-	margin-top: 1em;
-	margin-right: auto;
-	margin-left: auto;
-	text-align: center;
-}
-
 a:link {
 	color: #d81e05;
 }
