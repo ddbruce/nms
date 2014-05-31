@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140527024834) do
+ActiveRecord::Schema.define(version: 20140531201200) do
 
   create_table "memberships", force: true do |t|
     t.datetime "created_at"
@@ -36,6 +36,17 @@ ActiveRecord::Schema.define(version: 20140527024834) do
     t.integer  "RIN"
     t.integer  "avatar_id"
     t.integer  "year"
+    t.string   "email"
+    t.string   "password"
+    t.string   "password_confirmation"
+    t.string   "remember_me"
+    t.string   "encrypted_password"
+    t.integer  "sign_in_count",         default: 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "remember_created_at"
   end
 
 end
