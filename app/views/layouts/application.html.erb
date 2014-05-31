@@ -10,8 +10,17 @@
 </head>
 <body>
 
+  <!-- Page header -->
+  <%= render partial: "layouts/header" %>
+
+  <!-- Flash messages -->
+  <%= render partial: "layouts/messages" %>
+
+  <!-- Page content -->
   <%= yield %>
+
+  <!-- Footer -->
+  <%= render partial: "layouts/footer" %>
 
 </body>
 </html>
-
