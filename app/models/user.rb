@@ -14,13 +14,4 @@ class User < ActiveRecord::Base
     (fname || " ") + " " + (lname || " ")
   end
 
-  def organizations
-    # Return all organizations a user is a member of
-    organizations = Array.new()
-    Membership.where(uid: self.id).each do |mem|
-      organizations << Organization.find(mem.org_id)
-    end
-    organizations
-  end
-
 end

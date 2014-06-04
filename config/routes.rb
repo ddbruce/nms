@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   # Model CRUD routes
   resources :users
   resources :organizations
+  resources :memberships
 
 end
