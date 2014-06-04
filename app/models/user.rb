@@ -9,9 +9,19 @@ class User < ActiveRecord::Base
 
   validates :fname, :lname, :RIN, presence: true
 
+
   def name
     # Return the user's full name
     (fname || " ") + " " + (lname || " ")
+  end
+
+  def organizations
+    # Return all organizations a user is a member of
+    organizations = Array.new()
+    Membership.where(user_id: self.id).each do |mem|
+      organizations << Organization.find(mem.organization_id)
+    end
+    organizations
   end
 
 end

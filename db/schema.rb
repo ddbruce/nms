@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140604050442) do
+ActiveRecord::Schema.define(version: 20140604053851) do
 
   create_table "memberships", force: true do |t|
     t.datetime "created_at"
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20140604050442) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.datetime "remember_created_at"
+    t.boolean  "is_admin",              default: false, null: false
   end
 
 end

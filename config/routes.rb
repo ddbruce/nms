@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   # Application root 
   root to: 'pages#index'
+  # 
+  get '/users/:id/dashboard', to: 'users#dashboard'
 
   # Devise Routes
   devise_for :users,

@@ -4,6 +4,12 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def dashboard
+    @user = User.find(params[:id])
+    @memberships = @user.memberships
+    @organizations = @user.organizations
+  end
+
   def show
   end
 
