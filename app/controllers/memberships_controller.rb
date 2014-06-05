@@ -1,7 +1,7 @@
 class MembershipsController < ApplicationController
 
   def index
-    @memberships = Memberships.all
+    @memberships = Membership.all
   end
 
 end

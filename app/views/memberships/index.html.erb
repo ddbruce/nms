@@ -1,0 +1,4 @@
+<h3> Memberships </h3>
+<% @memberships.each do |mem| %>
+  <%= User.find(mem.user_id) %>
+<% end %>
