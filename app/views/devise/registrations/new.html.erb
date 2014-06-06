@@ -1,46 +1,52 @@
-<h2>Sign up</h2>
-<br />
-
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-
-  <%= devise_error_messages! %>
-
-  <div> 
-    <%= f.label :first_name %><br />
-    <%= f.text_field :fname, autofocus: true%>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2>Sign up</h2>
   </div>
 
-  <div>
-    <%= f.label :last_name %><br />
-    <%= f.text_field :lname %>
+  <div class="panel-body">
+    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+
+      <%= devise_error_messages! %>
+
+      <div> 
+        <%= f.label :first_name %><br />
+        <%= f.text_field :fname, autofocus: true%>
+      </div>
+
+      <div>
+        <%= f.label :last_name %><br />
+        <%= f.text_field :lname %>
+      </div>
+
+      <div>
+        <%= f.label :RIN %><br />
+        <%= f.text_field :RIN %>
+      </div>
+
+      <div>
+        <%= f.label :email %><br />
+        <%= f.email_field :email %>
+      </div>
+
+      <div>
+        <%= f.label :password %><br />
+        <%= f.password_field :password %>
+      </div>
+
+      <div>
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation %>
+      </div>
+      
+      <br />
+      <div>
+        <%= f.submit "Sign up" %>
+      </div>
+
+    <% end %>
+
+    <br />
+    <%= render "devise/shared/links" %>
+    <br />
   </div>
-
-  <div>
-    <%= f.label :RIN %><br />
-    <%= f.text_field :RIN %>
-  </div>
-
-  <div>
-    <%= f.label :email %><br />
-    <%= f.email_field :email %>
-  </div>
-
-  <div>
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </div>
-
-  <div>
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
-  </div>
-
-  <div>
-    <%= f.submit "Sign up" %>
-  </div>
-
-<% end %>
-
-<br />
-<%= render "devise/shared/links" %>
-<br />
+</div>

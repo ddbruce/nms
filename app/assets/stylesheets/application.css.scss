@@ -14,11 +14,24 @@
  *= require_self
  */
 
+
+ /* ================================================= */
+ /*                                                   */
+ /*             STYLE OVERRIDES GO HERE               */
+ /*																										*/
+ /* https://github.com/twbs/bootstrap-sass            */
+ /* http://getbootstrap.com/customize/#less-variables */
+ /*                                                   */
+ /* ================================================= */
+
+
+ @import "bootstrap";
+ @import "bootstrap/theme";
+
  html, body, h1, h2, h3, h4, h5, h6 {
  	margin: 0;
  	padding: 0;
  }
-
 
  /*fonts used in body*/
 /*
