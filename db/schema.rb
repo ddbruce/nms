@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140604053851) do
+ActiveRecord::Schema.define(version: 20140607162250) do
+
+  create_table "articles", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "head"
+    t.text     "body"
+    t.text     "subhead"
+    t.integer  "section_id"
+  end
 
   create_table "memberships", force: true do |t|
     t.datetime "created_at"
