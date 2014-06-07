@@ -1,33 +1,94 @@
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3> Account Details </h3>
+<div class="row">
+  <div class="col-md-12">
+    <%= render partial: "dashboard_controls" %>
   </div>
-  <div class="panel-body">
-    <% if @user.is_admin %> 
-      <h4> <b>SYSTEM ADMIN</b> </h4>
-    <% end %>
-
-    <b> Name: </b> <%= @user.name %> <br/>
-    <b> RIN: </b> <%= @user.RIN %> <br />
-    <b> email: </b> <%= @user.email %> <br />
-    <b> year: </b> <%= @user.year %> <br />
-    <b> account last edit: </b> <%= @user.updated_at %> <br />
-    <b> member since: </b> <%= @user.created_at %> <br />
-    <b> sign in count: </b> <%= @user.sign_in_count %> <br />
-    <b> last sign in: </b> <%= @user.last_sign_in_at %> <br />
-    <b> last ip: </b> <%= @user.last_sign_in_ip %> <br />
-  </div>
-
-  <br />
 </div>
 
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3> Your Organizations </h3>
+<div class="row">
+
+  <!-- Articles -->
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          Articles 
+        </a></h3>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse in">
+        <div class="panel-body">
+          You haven't published any articles 
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="panel-body">
-    <% @organizations.each do |org| %>
-      <%= org.title %>
-    <% end %>
+
+  <!-- Organizations -->
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          Your Organizations 
+        </a></h3>
+      </div>
+      <div id="collapseTwo" class="panel-collapse collapse in">
+        <div class="panel-body">
+          <% if @organizations.size > 0 %>
+            <% @organizations.each do |org| %>
+              <%= org.title %>
+            <% end %>
+          <% else %>
+            You're not a member of any organizations
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
+
+<div class="row">
+    <!-- Account Details -->
+  <div class="col-md-6"> 
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+          Account Details
+        </a></h3>
+      </div>
+      <div id="collapseThree" class="panel-collapse collapse">
+        <div class="panel-body">
+          <% if @user.is_admin %> 
+            <h4> <b>SYSTEM ADMIN</b> </h4>
+          <% end %>
+          <%= link_to "Edit User", edit_user_path(@user), :class => "btn btn-default pull-right" %>
+          <b> Name: </b> <%= @user.name %> <br/>
+          <b> RIN: </b> <%= @user.RIN %> <br />
+          <b> email: </b> <%= @user.email %> <br />
+          <b> year: </b> <%= @user.year %> <br />
+          <b> account last edit: </b> <%= @user.updated_at %> <br />
+          <b> member since: </b> <%= @user.created_at %> <br />
+          <b> sign in count: </b> <%= @user.sign_in_count %> <br />
+          <b> last sign in: </b> <%= @user.last_sign_in_at %> <br />
+          <b> last ip: </b> <%= @user.last_sign_in_ip %> <br />
+        </div>
+
+        <br />
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3><a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+          Settings
+        </a></h3>
+      </div>
+      <div id="collapseFour" class="panel-collapse collapse">
+        <div class="panel-body">
+          Future settings will go here (primary organization, etc.)
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>

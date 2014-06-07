@@ -1,0 +1,8 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand"><%= @user.name %></a>
+    </div>
+   <%= link_to "New Article", new_article_path, :class => "btn btn-default navbar-btn" %>
+  </div>
+</nav>

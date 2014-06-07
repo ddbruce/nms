@@ -16,4 +16,6 @@ Rails.application.routes.draw do
   resources :organizations
   resources :memberships
 
+  resources :articles
+
 end
