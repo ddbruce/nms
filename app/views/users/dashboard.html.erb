@@ -4,26 +4,10 @@
   </div>
 </div>
 
-<div class="row">
-
-  <!-- Articles -->
-  <div class="col-md-6">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-          Articles 
-        </a></h3>
-      </div>
-      <div id="collapseOne" class="panel-collapse collapse in">
-        <div class="panel-body">
-          You haven't published any articles 
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="col-md-6">
 
   <!-- Organizations -->
-  <div class="col-md-6">
+  <div class="row">
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
@@ -32,9 +16,9 @@
       </div>
       <div id="collapseTwo" class="panel-collapse collapse in">
         <div class="panel-body">
-          <% if @organizations.size > 0 %>
-            <% @organizations.each do |org| %>
-              <%= org.title %>
+          <% if @memberships.size > 0 %>
+            <% @memberships.each do |mem| %>
+              <%= mem.organization.title %>
             <% end %>
           <% else %>
             You're not a member of any organizations
@@ -43,11 +27,9 @@
       </div>
     </div>
   </div>
-</div>
 
-<div class="row">
-    <!-- Account Details -->
-  <div class="col-md-6"> 
+  <!-- Account Details -->
+  <div class="row"> 
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
@@ -75,8 +57,28 @@
       </div>
     </div>
   </div>
+</div>
 
-  <div class="col-md-6">
+
+<div class="col-md-6">
+
+  <!-- Articles -->
+  <div class="row">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          Articles 
+        </a></h3>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse in">
+        <div class="panel-body">
+          You haven't published any articles 
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3><a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">

@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3> <%= @organization.title %> 
+    <% if current_user.is_admin? || @is_leader %>     
+      <%= link_to "Manage Members", manage_members_path(@organization), :class => "btn btn-default btn-xs pull-right" %>
+    <% end %>
+    </h3>
+  </div>
+  <div class="panel-body">
+    <h4><b>Members</b></h4>
+    <% @organization.memberships.each do |mem| %>
+      <%= mem.user.name %>
+    <% end %>
+  </div>
+</div>

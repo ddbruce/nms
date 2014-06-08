@@ -1,4 +1,14 @@
-<h3> Organizations </h3>
-<% @organizations.each do |org| %>
-  <%= org.title %>
-<% end %>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3> Organizations
+    <% if current_user.is_admin? %>     
+      <%= link_to "New Organization", new_organization_path, :class => "btn btn-default btn-xs pull-right" %>
+    <% end %>
+    </h3>
+  </div>
+  <div class="panel-body">
+    <% @organizations.each do |org| %>
+      <%= link_to org.title, org %>
+    <% end %>
+  </div>
+</div>

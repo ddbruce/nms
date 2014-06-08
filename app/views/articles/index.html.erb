@@ -1,6 +1,13 @@
-<% @articles.each do |article| %>
-  <%= article.head %>
-  <%= article.subhead %>
-  <%= article.body %>
-  <%= article.section_id %>
-<% end %>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3> Article Index </h3>
+  </div>
+  <div class="panel-body">  
+    <% @articles.each do |article| %>
+      <%= article.head %>
+      <%= article.subhead %>
+      <%= article.body %>
+      <%= article.section_id %>
+    <% end %>
+  </div>
+</div>

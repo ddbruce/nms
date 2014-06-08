@@ -1,10 +1,16 @@
-<!-- Test backend relations -->
-<% @users.each do |user| %>
-  <p> <b> Name: </b> <%= user.name %> </p>
-  <p> 
-    <b> Organizations: </b>
-    <% user.organizations.each do |org| %>
-      <%= org.title %>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3> Users Index </h3>
+  </div>
+  <div class="panel-body">
+    <% @users.each do |user| %>
+      <p> <b> Name: </b> <%= user.name %> </p>
+      <p> 
+        <b> Organizations: </b>
+        <% user.organizations.each do |org| %>
+          <%= org.title %>
+        <% end %>
+      </p>
     <% end %>
-  </p>
-<% end %>
+  </div>
+</div>
