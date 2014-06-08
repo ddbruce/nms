@@ -4,9 +4,14 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   helper_method :user_dashboard_path
+  helper_method :manage_members_path
 
   def user_dashboard_path(user)
     "/users/#{user.id}/dashboard"
+  end
+
+  def manage_members_path(organization)
+    "/organizations/#{organization.id}/manage_members"
   end
 
   def after_sign_in_path_for(resource)

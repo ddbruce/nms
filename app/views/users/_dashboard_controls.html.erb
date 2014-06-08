@@ -3,6 +3,11 @@
     <div class="navbar-header">
       <a class="navbar-brand"><%= @user.name %></a>
     </div>
-   <%= link_to "New Article", new_article_path, :class => "btn btn-default navbar-btn" %>
+    <%= link_to "New Article", new_article_path, :class => "btn btn-default navbar-btn btn-sm" %>
+    <%= link_to "Organizations", organizations_path, :class => "btn btn-default navbar-btn btn-sm" %>
+    <% if current_user.is_admin? %>
+      <%= link_to "User Index", users_path, :class => "btn btn-default navbar-btn btn-sm"%>
+      <%= link_to "Article Index", articles_path, :class => "btn btn-default navbar-btn btn-sm" %>
+    <% end %>
   </div>
 </nav>
