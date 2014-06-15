@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+ @import "variables";
+
 #mast {
   margin-top: 1em;
   margin-right: auto;
@@ -64,6 +66,7 @@ input[type=text]:focus, textarea:focus {
 
 #sections {
   font-size: 20px;
+  font-weight: bold;
   text-align: center;
 
   ul {
@@ -73,7 +76,14 @@ input[type=text]:focus, textarea:focus {
     li {
       list-style-type: none;
       display: inline;
-    }
+      
+      a:link, a:visited, a:active {
+         color: black;
+      }
+      a:hover {
+        color: $polyreddarker;
+      }
+     }
   }
   
   li:before {

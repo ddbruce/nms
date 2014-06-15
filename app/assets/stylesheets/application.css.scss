@@ -25,7 +25,7 @@
  /*                                                   */
  /* ================================================= */
 
-
+ @import "variables";
  @import "bootstrap";
  @import "bootstrap/theme";
 
@@ -40,7 +40,7 @@ font-family: 'Open Sans', sans-serif;				<--- body text (contains 400 and 700 we
 font-family: 'Source Sans Pro', sans-serif;	<--- headlines, decks (contains 600 and 900 weights in both straight and italics)
 font-family: 'Droid Serif', serif;					<--- special uses, maybe blockquotes (contains 400 and 700 weights in both straight and italics)
 
-link: https://www.google.com/fonts#UsePlace:use/Collection:Source+Sans+Pro:600,900,600italic,900italic|Droid+Serif:400,700,400italic,700italic|Open+Sans:400italic,700italic,400,700
+link: http://bit.ly/nmsfonts
 
 */
 
@@ -50,12 +50,16 @@ Poly red: #d81e05
 
 */
 
+body {
+  font-family: "Open Sans","Helvetica Neue","Helvetica",sans-serif;
+}
+
 .polyred {
-  color: #d81e05;
+  color: $polyred;
 }
 
 .polyreddarker {
- color: #a61704;
+ color: $polyreddarker;
 }
 
 .space1em {
