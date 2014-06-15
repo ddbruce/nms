@@ -1,9 +1,37 @@
 <div id="header">
-  <div id="connect">
-  </div>
   <div id="mast">
-    <%= image_tag "site/mast.svg", alt: "poly mast", id: "logo" %>
+    <a href="/">
+      <%= image_tag "site/mast.svg", alt: "poly mast", id: "logo" %>
+    </a>
   </div>
-  <div id="search">
+  <div id="umast">
+    <div id="search">
+      <form id="searchform">
+        <label for="searchid">Search: </label>
+        <input type="text" name="search" id="searchid"/>
+      </form>
+    </div>
+    <div id="connect">
+      Connect with us!
+      <div id="buttons" style="word-spacing:5px;">
+        <a href="http://twitter.com/RPIPoly"><i class="fa fa-twitter-square fa-2x polyreddarker"></i></a>
+        <a href="http://facebook.com/thepolytechnic"><i class="fa fa-facebook-square fa-2x polyreddarker"></i></a>
+        <a href="http://reddit.com/u/ThePolytechnic"><i class="fa fa-reddit-square fa-2x polyreddarker"></i></a>
+        <a href="http://youtube.com/RPIPoly"><i class="fa fa-youtube-square fa-2x polyreddarker"></i></a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  </div>
+  <div id="uumast">
+    <div id="sections">
+      <ul>
+        <li><a href="/news">News</a></li>
+        <li><a href="/features">Features</a></li>
+        <li><a href="/edop">Editorial/Opinion</a></li>
+        <li><a href="/sports">Sports</a></li>
+        <li><a href="/photo">Photo</a></li>
+      </ul>
+    </div>
   </div>
 </div>
+

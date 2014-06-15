@@ -20,3 +20,6 @@ gem 'jbuilder', '~> 2.0'
 
 # User account creation and authentication 
 gem 'devise'
+
+#font awesome
+gem 'font-awesome-sass'

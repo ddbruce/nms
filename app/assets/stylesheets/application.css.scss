@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
 
 
@@ -49,6 +50,19 @@ Poly red: #d81e05
 
 */
 
+.polyred {
+  color: #d81e05;
+}
+
+.polyreddarker {
+ color: #a61704;
+}
+
+.space1em {
+  margin-left: .5em;
+  margin-right: .5em;
+}
+
 #kc {
 	width: 300px;
 	background: rgba(230,230,230,.85);
@@ -84,6 +98,7 @@ Poly red: #d81e05
 
 a:link {
 	color: #d81e05;
+  text-decoration: none;
 }
 
 a:visited {
@@ -96,4 +111,10 @@ a:hover {
 
 #login {
 	text-align: center;
+}
+
+#shell {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
