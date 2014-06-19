@@ -4,6 +4,6 @@ class Membership < ActiveRecord::Base
   belongs_to :organization
   has_one :position
 
-  validates :uid, :org_id, presence: true
+  validates :user_id, :organization_id, presence: true
 
 end

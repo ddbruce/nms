@@ -13,9 +13,11 @@ Rails.application.routes.draw do
                sessions: 'nms_devise/sessions'}
 
   # Model CRUD routes
-  resources :users
-  resources :organizations
-  resources :memberships
+  resources :users 
+  
+  resources :organizations do
+    resources :memberships
+  end
 
   resources :articles
 

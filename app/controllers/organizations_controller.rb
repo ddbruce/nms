@@ -14,7 +14,13 @@ class OrganizationsController < ApplicationController
   end
 
   def manage_members
+    @organization = Organization.find(params[:id])
+    @memberships = @organization.memberships
 
+    @users = User.not_in_organization(@organization)
+    if @users.length > 1
+      @users.sort! { |a,b| a.name.downcase <=> b.name.downcase }
+    end
   end
 
   def new

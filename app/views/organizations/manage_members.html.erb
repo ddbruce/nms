@@ -2,6 +2,36 @@
   <div class="panel-heading">
     <h3> Manage Members </h3>
   </div>
+
   <div class="panel-body">
+
+    <h4> Add New Member: </h4>
+    <br />
+      <% if @users %>
+        <%= form_for :membership, url: organization_memberships_path(organization_id: params[:id]), method: :post do |f| %>
+          <%= f.select :user_id, @users.all.collect {|u| [u.name, u.id ] }, { include_blank: true } %>
+          <%= f.label "Admin Privleges?" %>
+          <%= f.check_box :is_leader %>
+          <%= f.submit %>
+        <% end %>
+      <% end %> 
+
+      <% if @memberships %>
+        <hr />
+        <h4> Current Members </h4>
+          <% @memberships.each do |mem| %>
+            <% if mem.user.is_active? %>
+              <p> <%= mem.user.name %> </p>
+            <% end %>
+          <% end %> 
+
+        <hr />
+        <h4> Inactive Members </h4>
+          <% @memberships.each do |mem| %>
+            <% if !mem.user.is_active? %>
+              <p> <%= mem.user.name %> </p>
+            <% end %>
+          <% end %>
+      <% end %>
   </div>
 </div>
