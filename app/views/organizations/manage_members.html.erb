@@ -5,6 +5,7 @@
 
   <div class="panel-body">
 
+    <% if @users.length > 0 %>
     <h4> Add New Member: </h4>
     <br />
       <% if @users %>
@@ -15,10 +16,12 @@
           <%= f.submit %>
         <% end %>
       <% end %> 
+      <hr />
+    <% end %>
 
       <% if @memberships %>
-        <hr />
         <h4> Current Members </h4>
+        <br />
           <% @memberships.each do |mem| %>
             <% if mem.user.is_active? %>
               <p> <%= mem.user.name %> </p>

@@ -28,10 +28,10 @@ class User < ActiveRecord::Base
 
     memberships.collect! { |mem| mem.user }
 
-    results = User.all
-    results.each do |user|
+    results = Array.new()
+    User.all.each do |user|
       if memberships.include? user
-        results.delete(user)
+        results << user
       end
     end
 
