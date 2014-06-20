@@ -18,7 +18,7 @@
         <div class="panel-body">
           <% if @memberships.size > 0 %>
             <% @memberships.each do |mem| %>
-              <%= mem.organization.title %>
+              <%= link_to mem.organization.title, organization_path(mem.organization) %>
             <% end %>
           <% else %>
             You're not a member of any organizations

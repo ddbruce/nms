@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   resources :users 
   
   resources :organizations do
+    post '/organizations/:organization_id/memberships/:id' => 'memberships#leadership_status'
     resources :memberships
   end
 

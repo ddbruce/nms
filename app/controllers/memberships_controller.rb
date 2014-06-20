@@ -22,6 +22,20 @@ class MembershipsController < ApplicationController
     redirect_to manage_members_path(Organization.find(params[:organization_id]))
   end
 
+  def leadership_status
+    membership = Membership.find(params[:id])
+
+    if membership.is_leader
+      membership.is_leader = 0
+    else
+      membership.is_leader = 1
+    end
+
+    membership.save
+
+    redirect_to manage_members_path(Organization.find(params[:organization_id]))
+  end
+
   private
 
     def membership_params

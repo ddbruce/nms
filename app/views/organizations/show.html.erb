@@ -8,8 +8,10 @@
   </div>
   <div class="panel-body">
     <h4><b>Members</b></h4>
+    <br />
     <% @organization.memberships.each do |mem| %>
       <%= mem.user.name %>
+     <%= if mem.is_leader then icon("certificate") end %>
     <% end %>
   </div>
 </div>

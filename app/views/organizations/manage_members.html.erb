@@ -11,9 +11,10 @@
       <% if @users %>
         <%= form_for :membership, url: organization_memberships_path(organization_id: params[:id]), method: :post do |f| %>
           <%= f.select :user_id, @users, { include_blank: true } %>
-          <%= f.label "Admin Privleges?" %>
+          <%= f.label "Leader?" %>
           <%= f.check_box :is_leader %>
-          <%= f.submit %>
+          <br />
+          <%= f.submit "Add ", :class => "btn btn-xs btn-confirm" %>
         <% end %>
       <% end %> 
       <hr />
@@ -28,7 +29,22 @@
                           organization_membership_path(organization_id: params[:id], id: mem.id), 
                           method: :delete,
                           :class => "pull-right btn btn-danger btn-xs" %>
-              <p> <%= mem.user.name %> </p>
+              <% if !mem.is_leader %>
+                <%= button_to "Promote", 
+                            {:controller => :memberships, :action => 'leadership_status', :organization_id => params[:id], :id => mem.id },
+                            method: :leadership_status,
+                            :class => "pull-right btn btn-success btn-xs" %>
+              <% else %>
+                <%= button_to "Demote", 
+                            {:controller => :memberships, :action => 'leadership_status', :organization_id => params[:id], :id => mem.id },
+                            method: :leadership_status,
+                            :class => "pull-right btn btn-success btn-xs" %>
+
+              <% end %>
+              <p> 
+                <%= mem.user.name %> 
+                <%= if mem.is_leader then icon("certificate") end %>
+              </p>
             <% end %>
           <% end %> 
 

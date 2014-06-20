@@ -5,5 +5,6 @@ class Membership < ActiveRecord::Base
   has_one :position
 
   validates :user_id, :organization_id, presence: true
+  validates :user_id, uniqueness: true
 
 end
