@@ -10,7 +10,7 @@
     <br />
       <% if @users %>
         <%= form_for :membership, url: organization_memberships_path(organization_id: params[:id]), method: :post do |f| %>
-          <%= f.select :user_id, @users.all.collect {|u| [u.name, u.id ] }, { include_blank: true } %>
+          <%= f.select :user_id, @users, { include_blank: true } %>
           <%= f.label "Admin Privleges?" %>
           <%= f.check_box :is_leader %>
           <%= f.submit %>
@@ -24,6 +24,10 @@
         <br />
           <% @memberships.each do |mem| %>
             <% if mem.user.is_active? %>
+              <%= button_to "Remove", 
+                          organization_membership_path(organization_id: params[:id], id: mem.id), 
+                          method: :delete,
+                          :class => "pull-right btn btn-danger btn-xs" %>
               <p> <%= mem.user.name %> </p>
             <% end %>
           <% end %> 

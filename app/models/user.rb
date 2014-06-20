@@ -30,7 +30,7 @@ class User < ActiveRecord::Base
 
     results = Array.new()
     User.all.each do |user|
-      if memberships.include? user
+      if !memberships.include? user
         results << user
       end
     end

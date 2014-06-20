@@ -12,6 +12,16 @@ class MembershipsController < ApplicationController
     redirect_to organization_path(params[:organization_id])
   end
 
+  def destroy
+    membership = Membership.find_by_id(params[:id])
+
+    if !membership.nil?
+      membership.destroy
+    end
+
+    redirect_to manage_members_path(Organization.find(params[:organization_id]))
+  end
+
   private
 
     def membership_params
