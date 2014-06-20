@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   def dashboard
     @user = User.find(params[:id])
     @memberships = @user.memberships
+    @nms_config = NmsConfig.all 
   end
 
   def show

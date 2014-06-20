@@ -1,7 +1,9 @@
 <div class="panel panel-default">
-  <div class="panel-heading">
-    <h3> Manage Members </h3>
-  </div>
+    <ol class="breadcrumb">
+      <li><%= link_to "Dashboard", user_dashboard_path(current_user) %></li>
+      <li><%= link_to @organization.title, organization_path(@organization) %></li>
+      <li class="active">Manage Members</li>
+    </ol>
 
   <div class="panel-body">
 

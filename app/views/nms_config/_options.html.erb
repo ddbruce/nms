@@ -1,0 +1,4 @@
+<% @nms_config.each do |nc| %>
+  <b><%= nc.key %></b>: 
+  <%= if nc.value then nc.value end %>
+<% end %>

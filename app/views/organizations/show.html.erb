@@ -1,17 +1,18 @@
 <div class="panel panel-default">
-  <div class="panel-heading">
-    <h3> <%= @organization.title %> 
+  <ol class="breadcrumb">
+    <li><%= link_to "Dashboard", user_dashboard_path(current_user) %></li>
+    <li class="active"><%= @organization.title %></li>
     <% if current_user.is_admin? || @is_leader %>     
       <%= link_to "Manage Members", manage_members_path(@organization), :class => "btn btn-default btn-xs pull-right" %>
     <% end %>
-    </h3>
-  </div>
+  </ol>
+
   <div class="panel-body">
     <h4><b>Members</b></h4>
     <br />
     <% @organization.memberships.each do |mem| %>
-      <%= mem.user.name %>
-     <%= if mem.is_leader then icon("certificate") end %>
+      <%= link_to mem.user.name, user_path(mem.user) %>
+      <%= if mem.is_leader then icon("certificate") end %>
     <% end %>
   </div>
 </div>
