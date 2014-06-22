@@ -1,14 +1,24 @@
 <div class="panel panel-default">
-  <div class="panel-heading">
-    <h3> Organizations
+
+  <ol class="breadcrumb">
+    <li><%= link_to "Dashboard", user_dashboard_path(current_user) %></li>
+    <li class="active"> Organizations </li>
     <% if current_user.is_admin? %>     
       <%= link_to "New Organization", new_organization_path, :class => "btn btn-default btn-xs pull-right" %>
     <% end %>
-    </h3>
-  </div>
+  </ol>
+
   <div class="panel-body">
-    <% @organizations.each do |org| %>
-      <%= link_to org.title, org %>
-    <% end %>
+
+    <table class="table">
+      <tr>
+        <th> Organization Name </th>
+      </tr>
+      <% @organizations.each do |org| %>
+        <tr>
+          <td> <%= link_to org.title, org %> </td>
+        </tr>
+      <% end %>
+    </table>
   </div>
 </div>

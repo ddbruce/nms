@@ -2,8 +2,11 @@
   <ol class="breadcrumb">
     <li><%= link_to "Dashboard", user_dashboard_path(current_user) %></li>
     <li class="active"><%= @organization.title %></li>
-    <% if current_user.is_admin? || @is_leader %>     
-      <%= link_to "Manage Members", manage_members_path(@organization), :class => "btn btn-default btn-xs pull-right" %>
+    <% if current_user.is_admin? || @is_leader %> 
+      <div class="pull-right">
+        <%= link_to "Edit Positions", "", :class => "btn btn-default btn-xs" %>
+        <%= link_to "Manage Members", manage_members_path(@organization), :class => "btn btn-default btn-xs" %>
+      </div>
     <% end %>
   </ol>
 

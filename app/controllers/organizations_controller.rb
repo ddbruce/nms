@@ -21,7 +21,7 @@ class OrganizationsController < ApplicationController
     if @users.length > 1
       @users.sort! { |a,b| a.name.downcase <=> b.name.downcase }
       @users.all.collect {|u| [u.name, u.id ] }
-    else
+    elsif @users.length == 1
       @users = [[@users[0].name, @users[0].id]]
     end
   end

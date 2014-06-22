@@ -13,6 +13,7 @@ gem 'bootstrap-sass', '~> 3.1.1'
 gem 'uglifier', '>= 1.3.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 # Turbolinks makes following links in your web application faster
 gem 'turbolinks'
 # Build JSON APIs

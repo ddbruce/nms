@@ -1,13 +1,20 @@
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand"><%= @user.name %></a>
-    </div>
-    <%= link_to "New Article", new_article_path, :class => "btn btn-default navbar-btn btn-sm" %>
-    <%= link_to "Organizations", organizations_path, :class => "btn btn-default navbar-btn btn-sm" %>
-    <% if current_user.is_admin? %>
-      <%= link_to "User Index", users_path, :class => "btn btn-default navbar-btn btn-sm"%>
-      <%= link_to "Article Index", articles_path, :class => "btn btn-default navbar-btn btn-sm" %>
-    <% end %>
+<div class="row"> 
+  <div class="col-md-12">
+    <h3>
+      <% if @user.is_admin %>
+        <%= icon("bolt") %>
+      <% end %>
+      <%= @user.name %>
+      <%= link_to "New Article", new_article_path, :class => "btn" %>
+      <%= link_to "Join Organizations", organizations_path, :class => "btn" %>
+
+      <div class="pull-right">
+        <% if current_user.is_admin? %>
+          Admin Controls
+          <%= link_to "User Index", users_path, :class => "btn"%>
+          <%= link_to "Article Index", articles_path, :class => "btn" %>
+        <% end %>
+      </div>
+    </h3>
   </div>
-</nav>
+</div>

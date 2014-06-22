@@ -1,0 +1,13 @@
+<% if @user.is_admin %> 
+  <h4> <b>SYSTEM ADMIN</b> </h4>
+<% end %>
+<%= link_to "Edit User", edit_user_path(@user), :class => "btn btn-default pull-right" %>
+<b> Name: </b> <%= @user.name %> <br/>
+<b> RIN: </b> <%= @user.RIN %> <br />
+<b> email: </b> <%= @user.email %> <br />
+<b> year: </b> <%= @user.year %> <br />
+<b> account last edit: </b> <%= @user.updated_at %> <br />
+<b> member since: </b> <%= @user.created_at %> <br />
+<b> sign in count: </b> <%= @user.sign_in_count %> <br />
+<b> last sign in: </b> <%= @user.last_sign_in_at %> <br />
+<b> last ip: </b> <%= @user.last_sign_in_ip %> <br />

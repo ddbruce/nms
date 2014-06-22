@@ -9,9 +9,6 @@
   <meta charset="UTF-8">
 </head>
 <body>
-<div id="shell">
-  <!-- Page header -->
-  <%= render partial: "layouts/header" %>
 
   <br/><br/>
   <main role="main">
@@ -19,6 +16,8 @@
       <div class="content">
         <div class="row">
           <div class="span12">
+            <!-- Page header -->
+            <%= render partial: "layouts/header" %>
             <!-- Flash messages -->
             <%= render partial: "layouts/messages" %>
             <!-- Page content -->
@@ -32,6 +31,5 @@
 
   <!-- Footer -->
   <%= render partial: "layouts/footer" %>
-</div>
 </body>
 </html>

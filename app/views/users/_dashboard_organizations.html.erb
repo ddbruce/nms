@@ -1,0 +1,10 @@
+<!-- Organizations -->
+<h3> Your Organizations </h3>
+<hr />
+  <% if @memberships.size > 0 %>
+    <% @memberships.each do |mem| %>
+      <%= link_to mem.organization.title, organization_path(mem.organization) %>
+    <% end %>
+  <% else %>
+    You're not a member of any organizations
+  <% end %>

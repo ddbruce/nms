@@ -26,7 +26,7 @@ class User < ActiveRecord::Base
   def self.not_in_organization(organization)
     memberships = organization.memberships
 
-    memberships.collect! { |mem| mem.user }
+    memberships = memberships.collect! { |mem| mem.user }
 
     results = Array.new()
     User.all.each do |user|
