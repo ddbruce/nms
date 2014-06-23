@@ -22,6 +22,13 @@ class MembershipsController < ApplicationController
     redirect_to manage_members_path(Organization.find(params[:organization_id]))
   end
 
+  def add_position
+    membership = Membership.find(params[:membership_id])
+    membership.update_attributes(add_position_params)
+
+    redirect_to manage_members_path(Organization.find(params[:organization_id]))
+  end
+
   def leadership_status
     membership = Membership.find(params[:id])
 
@@ -40,6 +47,10 @@ class MembershipsController < ApplicationController
 
     def membership_params
       params.require(:membership).permit(:user_id, :is_leader)
+    end
+
+    def add_position_params
+      params.require(:membership).permit(:position_id)
     end
 
 end

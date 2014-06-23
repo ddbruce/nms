@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :user_dashboard_path
   helper_method :manage_members_path
+  helper_method :edit_positions_path
 
   def user_dashboard_path(user)
     "/users/#{user.id}/dashboard"
@@ -12,6 +13,10 @@ class ApplicationController < ActionController::Base
 
   def manage_members_path(organization)
     "/organizations/#{organization.id}/manage_members"
+  end
+
+  def edit_positions_path(organization)
+    "/organizations/#{organization.id}/edit_positions"
   end
 
   def after_sign_in_path_for(resource)

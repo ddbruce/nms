@@ -4,7 +4,7 @@
     <li class="active"><%= @organization.title %></li>
     <% if current_user.is_admin? || @is_leader %> 
       <div class="pull-right">
-        <%= link_to "Edit Positions", "", :class => "btn btn-default btn-xs" %>
+        <%= link_to "Edit Positions", edit_positions_path(@organization), :class => "btn btn-default btn-xs" %>
         <%= link_to "Manage Members", manage_members_path(@organization), :class => "btn btn-default btn-xs" %>
       </div>
     <% end %>
@@ -13,9 +13,22 @@
   <div class="panel-body">
     <h4><b>Members</b></h4>
     <br />
-    <% @organization.memberships.each do |mem| %>
-      <%= link_to mem.user.name, user_path(mem.user) %>
-      <%= if mem.is_leader then icon("certificate") end %>
-    <% end %>
+    <table class="table">
+      <tr>
+        <th> Name </th>
+        <th> Position </th>
+      </tr>
+      <% @organization.memberships.each do |mem| %>
+        <tr>
+          <td> 
+            <%= link_to mem.user.name, user_path(mem.user) %>
+            <%= if mem.is_leader then icon("certificate") end %>
+          </td>
+          <td>
+            <%= mem.position.title %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
   </div>
 </div>

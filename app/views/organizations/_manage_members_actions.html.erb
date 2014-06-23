@@ -1,0 +1,18 @@
+<td>
+<%= button_to "Remove", 
+          organization_membership_path(organization_id: params[:id], id: mem.id), 
+          method: :delete,
+          :class => "btn btn-danger btn-xs button_to" %>
+<% if !mem.is_leader %>
+  <%= button_to "Promote to Leader", 
+            {:controller => :memberships, :action => 'leadership_status', :organization_id => params[:id], :id => mem.id },
+            method: :leadership_status,
+            :class => "btn btn-success btn-xs button_to" %>
+  </td>
+<% else %>
+  <%= button_to "Demote to Member", 
+            {:controller => :memberships, :action => 'leadership_status', :organization_id => params[:id], :id => mem.id },
+            method: :leadership_status,
+            :class => "btn btn-success btn-xs button_to" %>
+<% end %>
+</td>

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   
   get '/users/:id/dashboard', to: 'users#dashboard'
   get '/organizations/:id/manage_members', to: 'organizations#manage_members'
+  get '/organizations/:id/edit_positions', to: 'organizations#edit_positions'
 
   # Devise Routes
   devise_for :users,
@@ -17,7 +18,10 @@ Rails.application.routes.draw do
   
   resources :organizations do
     post '/organizations/:organization_id/memberships/:id' => 'memberships#leadership_status'
-    resources :memberships
+    resources :memberships do
+      patch 'add_position'
+    end
+    resources :positions
   end
 
   resources :articles

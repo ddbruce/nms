@@ -22,41 +22,10 @@
       <hr />
     <% end %>
 
-      <% if @memberships %>
-        <h4> Current Members </h4>
-        <br />
-          <% @memberships.each do |mem| %>
-            <% if mem.user.is_active? %>
-              <%= button_to "Remove", 
-                          organization_membership_path(organization_id: params[:id], id: mem.id), 
-                          method: :delete,
-                          :class => "pull-right btn btn-danger btn-xs" %>
-              <% if !mem.is_leader %>
-                <%= button_to "Promote", 
-                            {:controller => :memberships, :action => 'leadership_status', :organization_id => params[:id], :id => mem.id },
-                            method: :leadership_status,
-                            :class => "pull-right btn btn-success btn-xs" %>
-              <% else %>
-                <%= button_to "Demote", 
-                            {:controller => :memberships, :action => 'leadership_status', :organization_id => params[:id], :id => mem.id },
-                            method: :leadership_status,
-                            :class => "pull-right btn btn-success btn-xs" %>
+    <% if @memberships %>
+      <%= render partial: "manage_current_members" %>
+      <%= render partial: "manage_inactive_members" %>
+    <% end %>
 
-              <% end %>
-              <p> 
-                <%= mem.user.name %> 
-                <%= if mem.is_leader then icon("certificate") end %>
-              </p>
-            <% end %>
-          <% end %> 
-
-        <hr />
-        <h4> Inactive Members </h4>
-          <% @memberships.each do |mem| %>
-            <% if !mem.user.is_active? %>
-              <p> <%= mem.user.name %> </p>
-            <% end %>
-          <% end %>
-      <% end %>
   </div>
 </div>

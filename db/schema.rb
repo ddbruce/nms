@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140620201546) do
+ActiveRecord::Schema.define(version: 20140623203113) do
 
   create_table "articles", force: true do |t|
     t.datetime "created_at"
@@ -25,10 +25,10 @@ ActiveRecord::Schema.define(version: 20140620201546) do
   create_table "memberships", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "pos_id"
     t.integer  "organization_id"
     t.integer  "user_id"
     t.boolean  "is_leader",       default: false, null: false
+    t.integer  "position_id"
   end
 
   create_table "nms_configs", force: true do |t|

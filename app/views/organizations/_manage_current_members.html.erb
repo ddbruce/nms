@@ -1,0 +1,27 @@
+<h4> Current Members </h4>
+<table class="table">
+  <tr>
+    <th> Name </th>
+    <th> Position </th>
+    <th> Actions </th>
+  </tr>
+  <% @memberships.each do |mem| %>
+    <% if mem.user.is_active? %>
+      <tr>
+        <td>
+          <%= mem.user.name %> 
+          <%= if mem.is_leader then icon("certificate") end %>
+        </td>
+        <td>
+          <% if !@positions.nil? and @positions.length > 0 %>
+            <%= form_for mem, url: organization_membership_add_position_path(organization_id: params[:id], membership_id: mem.id), method: :patch do |f| %>
+              <%= f.select :position_id, @positions, { include_blank: true } %>
+              <%= f.submit "Update", :class => "btn btn-xs btn-confirm" %>
+            <% end %>
+          <% end %>
+        </td>
+        <%= render partial: "manage_members_actions", locals: { mem: mem} %>
+      </tr>
+    <% end %>
+  <% end %>
+</table>

@@ -1,0 +1,32 @@
+<div class="panel panel-default">
+    <ol class="breadcrumb">
+      <li><%= link_to "Dashboard", user_dashboard_path(current_user) %></li>
+      <li><%= link_to @organization.title, organization_path(@organization) %></li>
+      <li class="active">Edit Positions</li>
+    </ol>
+
+  <div class="panel-body">
+    <h3> Current positions </h3>
+    <br />
+    <% if !@positions.nil? %>
+      <% @positions.each do |pos| %>
+        <%= pos.title %>
+        <% pos.memberships.each do |mem| %>
+          <%= mem.user.name %>
+        <% end %>
+      <% end %>
+    <% end %>
+
+    <hr />
+
+    <h3> Add a new position </h3><br/>
+    <%= form_for :position, url: organization_positions_path(organization_id: params[:id]), method: :post do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+      <%= f.submit :class => "btn btn-xs btn-confirm" %>
+    <% end %>
+    <hr />
+
+  </div>
+
+</div>
