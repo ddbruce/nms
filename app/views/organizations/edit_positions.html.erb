@@ -10,10 +10,15 @@
     <br />
     <% if !@positions.nil? %>
       <% @positions.each do |pos| %>
-        <%= pos.title %>
-        <% pos.memberships.each do |mem| %>
-          <%= mem.user.name %>
+        <b><%= pos.title %></b>
+        <% if pos.memberships.length > 0 %>
+          <% pos.memberships.each do |mem| %>
+            <%= "- #{mem.user.name}" %>
+          <% end%>
+        <% else %>
+          - <%= link_to "Assign to a member", manage_members_path(@organization) %>
         <% end %>
+        <br />
       <% end %>
     <% end %>
 

@@ -13,9 +13,9 @@ class MembershipsController < ApplicationController
   end
 
   def destroy
-    membership = Membership.find_by_id(params[:id])
+    membership = Membership.find(params[:id])
 
-    if !membership.nil?
+    if membership
       membership.destroy
     end
 

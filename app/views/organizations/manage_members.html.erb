@@ -22,9 +22,19 @@
       <hr />
     <% end %>
 
+    <% if @requests.length > 0%>
+      <div class="well">
+        <%= render partial: "manage_requests" %>
+      </div>
+    <% end %>
+
     <% if @memberships %>
       <%= render partial: "manage_current_members" %>
       <%= render partial: "manage_inactive_members" %>
+    <% end %>
+
+    <% if @rejections.length > 0 %>
+      <%= render partial: "manage_rejections" %>
     <% end %>
 
   </div>

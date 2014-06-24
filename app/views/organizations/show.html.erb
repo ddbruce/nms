@@ -19,15 +19,19 @@
         <th> Position </th>
       </tr>
       <% @organization.memberships.each do |mem| %>
-        <tr>
-          <td> 
-            <%= link_to mem.user.name, user_path(mem.user) %>
-            <%= if mem.is_leader then icon("certificate") end %>
-          </td>
-          <td>
-            <%= mem.position.title %>
-          </td>
-        </tr>
+        <% if mem.approval_status == 1 %>
+          <tr>
+            <td> 
+              <%= link_to mem.user.name, user_path(mem.user) %>
+              <%= if mem.is_leader then icon("certificate") end %>
+            </td>
+            <td>
+              <% if mem.position %>
+                <%= mem.position.title %>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
       <% end %>
     </table>
   </div>

@@ -1,0 +1,16 @@
+<h4> Membership Requests </h4>
+<table class="table">
+  <tr>
+    <th> Name </th>
+    <th> Actions </th>
+  </tr>
+  <% @requests.each do |req| %>
+    <tr> 
+      <td> <%= req.user.name %> </td>
+      <td> 
+        <%= button_to "Accept", organization_moderate_membership_path(@organization, membership_id: req.id, approval_status: 1), :class => "btn btn-success btn-xs" %>
+        <%= button_to "Reject", organization_moderate_membership_path(@organization, membership_id: req.id, approval_status: 2) , :class => "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+  <% end %>
+</table>

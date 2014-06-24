@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   
   resources :organizations do
     post '/organizations/:organization_id/memberships/:id' => 'memberships#leadership_status'
+    post 'join'
+    post 'moderate_membership'
     resources :memberships do
       patch 'add_position'
     end

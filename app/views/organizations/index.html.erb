@@ -13,10 +13,28 @@
     <table class="table">
       <tr>
         <th> Organization Name </th>
+        <th> </th>
       </tr>
       <% @organizations.each do |org| %>
         <tr>
           <td> <%= link_to org.title, org %> </td>
+          <% 
+            mem = nil
+            org.memberships.each do |membership| 
+              if membership.user_id == current_user.id 
+                mem = membership
+              end
+            end
+          %>
+          <% if mem.nil? %>
+            <td> <%= button_to "Join", organization_join_path(org), :class => "btn btn-xs btn-confirm" %></td>
+          <% elsif mem.approval_status == 1 %>
+              <td> You're already a member </td>
+          <% elsif mem.approval_status == 0 %>
+            <td> Your request has been sent. </td>
+          <% elsif mem.approval_status == 2 %>
+            <td> Your request has been denied. </td>
+          <% end %>
         </tr>
       <% end %>
     </table>

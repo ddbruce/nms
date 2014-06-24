@@ -1,0 +1,13 @@
+<h4> Membership Rejections </h4>
+<table class="table">
+  <tr>
+    <th> Name </th>
+    <th> Actions </th>
+  </tr>
+  <% @rejections.each do |rej| %>
+    <tr>
+      <td> <%= rej.user.name %> </td>
+      <td> <%= button_to "Unblock and Approve", organization_moderate_membership_path(@organization, membership_id: rej.id, approval_status: 1) , :class => "btn btn-confirm btn-xs" %>
+    </tr>
+  <% end %>
+</table>
