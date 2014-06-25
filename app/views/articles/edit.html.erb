@@ -1,11 +1,11 @@
 <div class="panel panel-default">
   <ol class="breadcrumb">
     <li><%= link_to "Dashboard", user_dashboard_path(current_user) %></li>
-    <li class="active"> New Article </li>
+    <li class="active"> Edit Article </li>
   </ol>
 
   <div class="panel-body" style="text-align: center">
-    <%= form_for @article, action: "create" do |f| %>
+    <%= form_for @article, action: "update" do |f| %>
       <p>
         <h3> <%= f.label :head %> </h3>
         <%= f.text_field :head, style: "width: 500px" %>
@@ -26,7 +26,7 @@
       </p>
 
       <p> 
-        <%= f.submit "Create Article" %>
+        <%= f.submit "Update Article" %>
       </p>
 
     <% end %>

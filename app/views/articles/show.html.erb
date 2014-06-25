@@ -1,4 +1,11 @@
-<%= @article.head %>
-<%= @article.suhhead %>
-<%= @article.body %>
-<%= @article.section_id %>
+<h1 style="text-align: center; margin-left: auto; margin-right: auto;">
+  <%= @article.head %>
+</h1>
+<br />
+<h3 style="text-align: center">
+  <%= @article.subhead %>
+</h3>
+<br />
+<p style="width: 500px; margin-left: auto; margin-right: auto;">
+  <%= @article.body.html_safe %>
+</p>

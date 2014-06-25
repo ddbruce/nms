@@ -5,12 +5,28 @@
     <li class="active"> Article Index </li>
   </ol>
 
-  <div class="panel-body">  
-    <% @articles.each do |article| %>
-      <%= article.head %>
-      <%= article.subhead %>
-      <%= article.body %>
-      <%= article.section_id %>
-    <% end %>
+  <div class="panel-body"> 
+    <table class="table">
+      <tr>
+        <th> Article Heading </th>
+        <th> Article Section </th>
+        <th> Date Published </th>
+        <th> Last Edited </th>
+        <th> Actions </th>
+      </tr>
+
+      <% @articles.each do |article| %>
+        <tr> 
+          <td> <%= link_to article.head, article_path(article) %> </td>
+          <td> <%= article.section_id %> </td>
+          <td> <%= article.created_at %> </td>
+          <td> <%= article.updated_at %> </td>
+          <td>             
+            <%= button_to "Edit", edit_article_path(article), method: :get, :class => "btn btn-xs" %>
+            <%= button_to "Delete", article_path(article), method: :delete, :class =>"btn btn-xs button_to" %> 
+          </td>
+        </tr>
+      <% end %>
+    </table>
   </div>
 </div>
