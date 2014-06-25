@@ -7,18 +7,18 @@
   <div class="panel-body" style="text-align: center">
     <%= form_for @article, action: "create" do |f| %>
       <p>
-        <h3> <%= f.label :head %> </h3>
-        <%= f.text_field :head, style: "width: 500px" %>
+        <h3> <%= f.label :headline %> </h3>
+        <%= f.text_field :headline, style: "width: 500px" %>
       </p>
 
       <p>
-        <h3> <%= f.label :subhead %> </h3>
-        <%= f.text_area :subhead, style: "width: 500px;" %>
+        <h3> <%= f.label :deck %> </h3>
+        <%= f.text_area :deck, style: "width: 500px;" %>
       </p>
 
       <p>
-        <h3> <%= f.label :body %> </h3>
-        <%= f.text_area :body, style: "width: 500px; height: 500px;" %>
+        <h3> <%= f.label :bodytext %> </h3>
+        <%= f.text_area :bodytext, style: "width: 500px; height: 500px;" %>
       </p>
 
       <p>

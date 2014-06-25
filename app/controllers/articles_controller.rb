@@ -53,7 +53,7 @@ class ArticlesController < ApplicationController
   private
 
     def article_params
-      params.require(:article).permit(:head, :subhead, :body, :section_id)
+      params.require(:article).permit(:headline, :deck, :bodytext, :section_id)
     end 
 
 end

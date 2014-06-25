@@ -1,5 +1,5 @@
 class Article < ActiveRecord::Base
 
-  validates :head, :body, presence: true
+  validates :headline, :bodytext, presence: true
 
 end

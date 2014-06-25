@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140625175353) do
+ActiveRecord::Schema.define(version: 20140625191547) do
 
   create_table "articles", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "head"
-    t.text     "body"
-    t.text     "subhead"
+    t.text     "headline"
+    t.text     "bodytext"
+    t.text     "deck"
     t.integer  "section_id"
   end
 
