@@ -1,7 +1,5 @@
 <ul>
-  <% if !@sections.nil? %>
-    <% @sections.each do |section| %>
-      <%= section.title %>
-    <% end %>
+  <% Section.active_sections.each do |section| %>
+    <li><%= link_to section.title, "" %></li>
   <% end %>
 </ul>

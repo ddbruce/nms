@@ -6,27 +6,29 @@
   </ol>
 
   <div class="panel-body"> 
-    <table class="table">
-      <tr>
-        <th> Article Headline </th>
-        <th> Article Section </th>
-        <th> Date Published </th>
-        <th> Last Edited </th>
-        <th> Actions </th>
-      </tr>
-
-      <% @articles.each do |article| %>
-        <tr> 
-          <td> <%= link_to article.headline, article_path(article) %> </td>
-          <td> <%= article.section_id %> </td>
-          <td> <%= article.created_at %> </td>
-          <td> <%= article.updated_at %> </td>
-          <td>             
-            <%= button_to "Edit", edit_article_path(article), method: :get, :class => "btn btn-xs" %>
-            <%= button_to "Delete", article_path(article), method: :delete, :class =>"btn btn-xs button_to", data: { confirm: "Are you sure you would like to delete the article #{article.headline}"} %> 
-          </td>
+    <% if @articles.length > 0 %>
+      <table class="table">
+        <tr>
+          <th> Article Headline </th>
+          <th> Article Section </th>
+          <th> Date Published </th>
+          <th> Last Edited </th>
+          <th> Actions </th>
         </tr>
-      <% end %>
-    </table>
+
+        <% @articles.each do |article| %>
+          <tr> 
+            <td> <%= link_to article.headline, article_path(article) %> </td>
+            <td> <%= article.section_id %> </td>
+            <td> <%= article.created_at %> </td>
+            <td> <%= article.updated_at %> </td>
+            <td>             
+              <%= button_to "Edit", edit_article_path(article), method: :get, :class => "btn btn-xs" %>
+              <%= button_to "Delete", article_path(article), method: :delete, :class =>"btn btn-xs button_to", data: { confirm: "Are you sure you would like to delete the article #{article.headline}"} %> 
+            </td>
+          </tr>
+        <% end %>
+      </table>
+    <% end %>
   </div>
 </div>

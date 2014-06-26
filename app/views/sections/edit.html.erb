@@ -1,0 +1,19 @@
+<div class="panel panel-default">
+
+  <ol class="breadcrumb">
+    <li><%= link_to "Dashboard", user_dashboard_path(current_user) %></li>
+    <li><%= link_to "Article Sections", sections_path %></li>
+    <li class="active"> Edit section: <%= @section.title %> </li>
+  </ol>
+
+  <div class="panel-body">
+    <%= form_for @section, url: section_path, method: :patch do |f| %>
+
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+      <%= f.submit "Save section", :class => "btn btn-confirm btn-xs" %>
+
+    <% end %>
+  </div>
+
+</div>

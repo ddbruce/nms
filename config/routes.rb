@@ -13,7 +13,6 @@ Rails.application.routes.draw do
                registrations: 'nms_devise/registrations',
                sessions: 'nms_devise/sessions'}
 
-  # Model CRUD routes
   resources :users 
   
   resources :organizations do
@@ -26,6 +25,10 @@ Rails.application.routes.draw do
     resources :positions
   end
 
+  resources :sections do
+    post 'toggle_visibility'
+  end
+  
   resources :articles
 
 end

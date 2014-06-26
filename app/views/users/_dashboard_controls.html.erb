@@ -11,6 +11,7 @@
       <div class="pull-right">
         <% if current_user.is_admin? %>
           Admin Controls
+          <%= link_to "Article Sections", sections_path, :class => "btn" %>
           <%= link_to "Article Index", articles_path, :class => "btn" %>
           <%= link_to "User Index", users_path, :class => "btn"%>
         <% end %>

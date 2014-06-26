@@ -1,0 +1,63 @@
+<div class="panel panel-default">
+
+  <ol class="breadcrumb">
+    <li><%= link_to "Dashboard", user_dashboard_path(current_user) %></li>
+    <li class="active"> Article Sections </li>
+  </ol>
+
+  <div class="panel-body">
+
+    <%= render partial: "add_section" %>
+
+    <hr />
+    <% if @sections.length > 0 %>
+      <table class="table">
+        <tr>
+          <th> Section Name </th>
+          <th> Visibility </th>
+          <th> Articles </th>
+          <th> Actions </th>
+        </tr>
+        <% @sections.each do |se| %>
+          <tr>
+            <td> <%= se.title %> </td>
+
+            <% if se.is_active %>
+              <td>
+                <%= button_to "Shown",
+                      {controller: :sections, action: :toggle_visibility, section_id: se.id},
+                      :class => "btn btn-confirm btn-xs" 
+                  %>
+              </td>
+            <% else %>
+              <td>
+                <%= button_to "Hidden", 
+                      {controller: :sections, action: :toggle_visibility, section_id: se.id}, 
+                      :class => "btn btn-confirm btn-xs" 
+                  %>
+              </td>
+            <% end %>
+
+            <td> View Articles </td>
+            <td> 
+              <%= button_to "Edit",
+                  edit_section_path(se),
+                  method: :get,
+                  :class => "btn btn-confirm btn-xs"
+              %>
+
+              <%= button_to "Delete",
+                  section_path(se), 
+                  method: :delete,
+                  data: { confirm: "Are you sure you want to delete the section #{se.title}?"},
+                  :class => "btn btn-confirm btn-xs"
+              %>
+            </td>
+          </tr>
+        <% end %>
+      </table>
+    <% else %>
+      <p> No Sections found </p>
+    <% end %>
+  </div>
+</div>
