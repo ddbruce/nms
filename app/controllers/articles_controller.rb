@@ -12,10 +12,12 @@ class ArticlesController < ApplicationController
     @article = Article.new
 
     @sections = Section.sections_for_select
+    @organizations = Organization.sections_for_select(current_user)
   end
 
   def create
     @article = Article.new(article_params)
+    @article.user_id = current_user.id
 
     if @article.save
       redirect_to article_path(@article)
@@ -32,10 +34,12 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
 
     @sections = Section.sections_for_select
+    @organizations = Organization.sections_for_select(current_user)
   end
 
   def update
     @article = Article.find(params[:id])
+    @article.user_id = current_user.id
 
     if @article.update_attributes(article_params)
       redirect_to @article
@@ -57,7 +61,7 @@ class ArticlesController < ApplicationController
   private
 
     def article_params
-      params.require(:article).permit(:headline, :deck, :bodytext, :section_id)
+      params.require(:article).permit(:headline, :deck, :bodytext, :section_id, :organization_id)
     end 
 
 end

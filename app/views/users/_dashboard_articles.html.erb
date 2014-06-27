@@ -2,4 +2,10 @@
 <hr />
 <h3> Articles </h3>
 <hr />
-You haven't published any articles 
+  <% if @articles.size > 0 %>
+    <% @articles.each do |article| %>
+      <%= link_to article.headline, article_path(article) %>
+    <% end %>
+  <% else %>
+    You haven't published any articles yet
+  <% end %>

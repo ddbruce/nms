@@ -21,6 +21,11 @@
         <%= f.text_area :bodytext, style: "width: 500px; height: 500px;" %>
       </p>
 
+      <p> 
+        <h3> <%= f.label :publishing_organization %> </h3>
+        <%= f.select :organization_id, @organizations, {include_blank: true} %> 
+      </p>
+
       <p>
         <h3> <%= f.label :section %> </h3> 
         <%= f.select :section_id, @sections, {include_blank: true} %>

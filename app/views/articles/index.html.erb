@@ -11,6 +11,8 @@
         <tr>
           <th> Article Headline </th>
           <th> Article Section </th>
+          <th> Publishing User </th>
+          <th> Publishing Organization </th>
           <th> Date Published </th>
           <th> Last Edited </th>
           <th> Actions </th>
@@ -20,6 +22,19 @@
           <tr> 
             <td> <%= link_to article.headline, article_path(article) %> </td>
             <td> <%= article.section_id %> </td>
+
+            <% if article.user %>
+              <td> <%= article.user.name %> </td>
+            <% else %>
+              <td> Unspecified </td>
+            <% end %>
+
+            <% if article.organization %>
+              <td> <%= article.organization.title %> </td>
+            <% else %>
+              <td> Unspecified </td>
+            <% end %>
+
             <td> <%= article.created_at %> </td>
             <td> <%= article.updated_at %> </td>
             <td>             
