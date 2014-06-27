@@ -5,6 +5,7 @@ class SectionsController < ApplicationController
   end
 
   def show
+    @articles = Article.where(section_id: params[:id])
   end
 
   def toggle_visibility

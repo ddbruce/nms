@@ -10,6 +10,8 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
+
+    @sections = Section.sections_for_select
   end
 
   def create
@@ -28,6 +30,8 @@ class ArticlesController < ApplicationController
 
   def edit
     @article = Article.find(params[:id])
+
+    @sections = Section.sections_for_select
   end
 
   def update

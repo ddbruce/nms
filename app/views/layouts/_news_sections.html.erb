@@ -1,5 +1,5 @@
 <ul>
   <% Section.active_sections.each do |section| %>
-    <li><%= link_to section.title, "" %></li>
+    <li><%= link_to section.title, section_path(section) %></li>
   <% end %>
 </ul>

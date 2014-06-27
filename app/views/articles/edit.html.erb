@@ -23,6 +23,7 @@
 
       <p>
         <h3> <%= f.label :section %> </h3> 
+        <%= f.select :section_id, @sections, {include_blank: true} %>
       </p>
 
       <p> 
