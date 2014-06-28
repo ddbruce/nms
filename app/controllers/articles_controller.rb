@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
 
   def index
-    @articles = Article.all
+    @articles = Article.all.order(:updated_at).kaminari_page(params[:page]).per(20)
   end
 
   def show

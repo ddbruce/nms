@@ -7,6 +7,13 @@
 
   <div class="panel-body"> 
     <% if @articles.length > 0 %>
+
+      <div class="article_search">
+        <%= text_field_tag :article_search, nil, :class => "article_search_input", placeholder: "Search by article title ..." %>
+        <br />
+      </div>
+
+      <%= paginate @articles %>
       <table class="table">
         <tr>
           <th> Article Headline </th>
@@ -35,8 +42,12 @@
               <td> Unspecified </td>
             <% end %>
 
-            <td> <%= article.created_at %> </td>
-            <td> <%= article.updated_at %> </td>
+            <td> 
+              <%= article.created_at.strftime("%m/%d/%Y") %> 
+            </td>
+            <td> 
+              <%= article.updated_at.strftime("%m/%d/%Y")   %> 
+            </td>
             <td>             
               <%= button_to "Edit", edit_article_path(article), method: :get, :class => "btn btn-xs" %>
               <%= button_to "Delete", article_path(article), method: :delete, :class =>"btn btn-xs button_to", data: { confirm: "Are you sure you would like to delete the article #{article.headline}"} %> 
