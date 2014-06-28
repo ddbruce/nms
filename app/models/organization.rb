@@ -3,6 +3,7 @@ class Organization < ActiveRecord::Base
   has_many :memberships, dependent: :destroy
   has_many :positions, dependent: :destroy
   has_many :articles
+  has_many :medias
 
   validates :title, presence: true
 

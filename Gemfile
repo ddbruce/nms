@@ -2,8 +2,11 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.1.0'
 gem 'sqlite3'
+
 # User account creation and authentication 
 gem 'devise'
+# Use carrierwave for file uploads
+gem 'carrierwave'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
