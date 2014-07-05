@@ -24,6 +24,7 @@ class SectionsController < ApplicationController
 
   def create
     section = Section.new(section_params)
+    section.is_active = true
 
     if section.save
       redirect_to sections_path
