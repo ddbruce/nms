@@ -27,3 +27,5 @@ gem 'jbuilder', '~> 2.0'
 
 #font awesome
 gem 'font-awesome-sass'
+
+gem 'therubyracer'
