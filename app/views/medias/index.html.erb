@@ -3,10 +3,29 @@
   <ol class="breadcrumb">
     <li><%= link_to "Dashboard", user_dashboard_path(current_user) %></li>
     <li class="active"> Media Index </li>
+    <div class="pull-right">
+      <%= link_to "Upload media", new_media_path, :class => "btn btn-default btn-xs" %>
+    </div>
   </ol>
 
   <div class="panel-body">
-    
+    <table class="table">
+      <tr>
+        <th> Media Type </th>
+        <th> View Media </th>
+        <th> Attr. User </th>
+        <th> Attr. Organization </th>
+        <th> Actions </th>
+      </tr>
+      <% @media.each do |m| %>
+        <tr>
+          <td> <%= m.media_type %> </td>
+          <td> <%= m.media_id %> </td>
+          <td> <%= m.user_id %> </td>
+          <td> <%= m.organization_id %> </td>
+          <td> Edit | Delete </td>
+        </tr>
+      <% end %>
+    </table>
   </div>
-
 </div>
