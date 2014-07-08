@@ -30,7 +30,7 @@
   display: inline-block;
 }
 
-input[type=text], textarea {
+input[type=text], input[type=password], input[type=email], textarea {
   -webkit-transition: all 0.30s ease-in-out;
   -moz-transition: all 0.30s ease-in-out;
   -ms-transition: all 0.30s ease-in-out;
@@ -41,12 +41,26 @@ input[type=text], textarea {
   border: 1px solid #DDDDDD;
 }
  
-input[type=text]:focus, textarea:focus {
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, textarea:focus {
   box-shadow: 0 0 5px #d81e05;
   padding: 3px 0px 3px 3px;
   margin: 5px 1px 3px 0px;
   border: 1px solid #d81e05;
 }
+
+input[type=submit] {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+
+}
+
+
+input[type=submit]:focus {
+ 	box-shadow: 0 0 5px #d81e05;
+}
+
 
 /*
  body {
@@ -93,4 +107,34 @@ input[type=text]:focus, textarea:focus {
   li:first-child:before {
     content: none;
   }
+}
+
+#main {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.main-headline {
+	font-family: "Source Sans Pro",sans-serif;
+	font-weight: 900;
+	font-size: 30px;	
+	text-align: center;
+	color: black;
+}
+
+.main-photo {
+	width: 60%;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 1em;
+}
+
+.main-text {
+	width: 30%;
+	display: inline-block;
+}
+
+.main-readmore {
+	text-align: right;
 }
