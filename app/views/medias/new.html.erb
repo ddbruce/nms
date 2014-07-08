@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+
+  <ol class="breadcrumb">
+    <li><%= link_to "Dashboard", user_dashboard_path(current_user) %></li>
+    <li><%= link_to "Media Index", medias_path %></li>
+    <li class="active"> Upload Media </li>
+  </ol>
+
+  <div class="panel-body">
+    <ul class="nav nav-tabs">
+      <% all_media_types = MediaTypes.all %>
+      <% all_media_types.each do |mt| %>
+         <li class="<%= if mt.type_name == @upload_media_type.type_name then 'active' else '' end %>"> 
+          <%= link_to mt.type_name, new_media_path(upload_media_type: mt.type_name) %>
+        </li>
+      <% end %>
+    </ul>
+
+    <br />
+
+    <%= render partial: "medias/media_forms/#{@upload_media_type.type_name.downcase}" %>
+  </div>
+</div>
