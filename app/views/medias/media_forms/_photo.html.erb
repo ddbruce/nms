@@ -1,0 +1,17 @@
+<h3> Photo upload </h3>
+<br />
+<%= form_for :photo, html: {multipart: true}, url: medias_path, method: :create do |f| %>
+  <p>
+    <%= f.file_field :image %>
+  </p>
+  <p> 
+    <h4> Link to article (optional) </h4>
+
+  </p>
+  <p>
+    <h4> 
+  </p>
+  <p>
+    <%= f.submit "Upload" %>
+  </p>
+<% end %>

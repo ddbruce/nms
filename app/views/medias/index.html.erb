@@ -19,11 +19,13 @@
       </tr>
       <% @media.each do |m| %>
         <tr>
-          <td> <%= m.media_type %> </td>
-          <td> <%= m.media_id %> </td>
-          <td> <%= m.user_id %> </td>
+          <td> <%= MediaTypes.find(m.media_type).type_name %> </td>
+          <td> <%= link_to m.media_id %> </td>
+          <td> <%= link_to m.user_id, user_path(id: m.user_id) %> </td>
           <td> <%= m.organization_id %> </td>
-          <td> Edit | Delete </td>
+          <td> 
+            <%= button_to "Delete", media_path(m), method: :delete, :class => "btn btn-danger btn-xs" %>
+          <td>
         </tr>
       <% end %>
     </table>
