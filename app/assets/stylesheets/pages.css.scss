@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
- @import "variables";
+@import "variables";
 
 #mast {
   margin-top: 1em;
@@ -40,7 +40,7 @@ input[type=text], input[type=password], input[type=email], textarea {
   margin: 5px 1px 3px 0px;
   border: 1px solid #DDDDDD;
 }
- 
+
 input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, textarea:focus {
   box-shadow: 0 0 5px #d81e05;
   padding: 3px 0px 3px 3px;
@@ -58,17 +58,21 @@ input[type=submit] {
 
 
 input[type=submit]:focus {
- 	box-shadow: 0 0 5px #d81e05;
+  box-shadow: 0 0 5px #d81e05;
 }
 
 
 /*
- body {
-  background-image: url(image_path('site/bg.png'));
+body {
+background-image: url(image_path('site/bg.png'));
 }
 */
 
 .clearer { clear: both; }
+
+#umast {
+  margin-top: -1em;
+}
 
 #uumast {
   width: 100%;
@@ -90,51 +94,98 @@ input[type=submit]:focus {
     li {
       list-style-type: none;
       display: inline;
-      
+
       a:link, a:visited, a:active {
-         color: black;
+        color: black;
       }
       a:hover {
         color: $polyreddarker;
       }
-     }
+    }
   }
-  
+
   li:before {
     content: "\00a0\00a0\00a0|\00a0\00a0\00a0";
   }
-  
+
   li:first-child:before {
     content: none;
   }
 }
 
 #main {
-	width: 60%;
-	margin-left: auto;
-	margin-right: auto;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  height: 500px;
 }
+
+.main-item {
+  position: absolute;
+  min-height: 400px;
+  max-height: 600px;
+  opacity: 0;
+}
+
+.main-content {
+  margin-top: 10px;
+}
+
 
 .main-headline {
-	font-family: "Source Sans Pro",sans-serif;
-	font-weight: 900;
-	font-size: 30px;	
-	text-align: center;
-	color: black;
+  font-family: "Source Sans Pro",sans-serif;
+  font-weight: 900;
+  font-size: 30px;	
+  text-align: justify;
+  color: black;
+  line-height: 1;
 }
 
+.main-deck {
+  font-family: "Source Sans Pro",sans-serif;
+  font-weight: 600;
+  font-size: 20px;	
+  text-align: justify;
+  color: black;
+  line-height: 1;
+}
+
+
 .main-photo {
-	width: 60%;
-	display: inline-block;
-	vertical-align: top;
-	margin: 0 1em;
+  width: 60%;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 1em 0 0;
+
+  img {
+    width: 100%;
+    border: 1px solid black;
+  }
+}
+
+.main-photo-caption {
+  text-align: justify;
+  text-indent: 20px;
+  font-weight: bold;
+}
+
+.main-photo-byline {
+  font-size: 10px;
+  text-align: right;
 }
 
 .main-text {
-	width: 30%;
-	display: inline-block;
+  width: 30%;
+  display: inline-block;
+
+  p { 
+    text-align: justify;
+    text-indent: 20px;
+    margin: 0 !important;
+  }
 }
 
 .main-readmore {
-	text-align: right;
+  text-align: right;
 }
