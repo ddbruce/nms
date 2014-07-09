@@ -6,5 +6,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-
+# Add global configuration options
 NmsConfig.create(key: "Primary Group", value: nil)
+
+
+# List of available media types
+media_types = ["Photo", "XML"]
+# Save available media types
+media_types.each do |type|
+  MediaTypes.create(type_name: type)
+end
