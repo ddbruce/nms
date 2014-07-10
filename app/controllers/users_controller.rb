@@ -5,10 +5,14 @@ class UsersController < ApplicationController
   end
 
   def dashboard
-    @user = User.find(params[:id])
+    @user = User.find(params[:user_id])
     @memberships = Membership.where(user_id: @user.id, approval_status: 1)
-    @articles = Article.where(user_id: @user.id)
-    @nms_config = NmsConfig.all 
+    @articles = Article.where(user_id: @user.id) 
+  end
+
+  def nms_config_options
+    @nms_config_basic = NmsConfig.where(requires_admin: false)
+    @nms_config_admin = NmsConfig.where(requires_admin: true)
   end
 
   def show

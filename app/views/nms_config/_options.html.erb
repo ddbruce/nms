@@ -1,4 +1,42 @@
-<% @nms_config.each do |nc| %>
-  <b><%= nc.key %></b>: 
-  <%= if nc.value then nc.value end %>
-<% end %>
+<div class="panel panel-default">
+
+  <ol class="breadcrumb">
+    <li><%= link_to "Dashboard", user_dashboard_path(current_user) %></li>
+    <li class="active"> Settings </li>
+  </ol>
+
+  <div class="panel-body"> 
+    <h3> Basic Options </h3>
+    <table class="table">
+      <tr>
+        <th> Name </th>
+        <th> Value </th>
+      </tr>
+      <% @nms_config_basic.each do |nc| %>
+        <tr>
+          <td> <b><%= nc.key %></b> </td>
+          <td> 
+            <%= render partial: "nms_config/value_selection", locals: {nc: nc} %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+
+    <% if current_user.is_admin? %>
+      <h3> Admin Options </h3>
+      <table class="table">
+        <tr>
+          <th> Name </th>
+          <th> Value </th>
+        </tr>
+        <% @nms_config_admin.each do |nc| %>
+          <tr>
+            <td> <b><%= nc.key %></b> </td>
+            <td> <%= if nc.value then nc.value end %> </td>
+          </tr>
+        <% end %>
+      </table>
+    <% end %>
+
+  </div>
+</div>

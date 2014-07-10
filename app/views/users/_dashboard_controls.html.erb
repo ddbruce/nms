@@ -7,6 +7,7 @@
       <%= @user.name %>
       <%= link_to "New Article", new_article_path, :class => "btn" %>
       <%= link_to "Join Organizations", organizations_path, :class => "btn" %>
+      <%= link_to "Settings", user_nms_config_path, :class => "btn" %>
 
       <div class="pull-right">
         <% if current_user.is_admin? %>

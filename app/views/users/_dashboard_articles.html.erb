@@ -5,6 +5,7 @@
   <% if @articles.size > 0 %>
     <% @articles.each do |article| %>
       <%= link_to article.headline, article_path(article) %>
+      <br />
     <% end %>
   <% else %>
     You haven't published any articles yet
