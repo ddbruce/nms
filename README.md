@@ -3,7 +3,7 @@ News Management System
 
 Overview
 --------
-Originally designed for the school newspaper at the Rensselaer Polytechnic Institute in Troy, New York, the Polytechnic NMS is a content management system tailored for media organizations. 
+Originally designed for the school newspaper at the Rensselaer Polytechnic Institute, the Polytechnic NMS is a content management system tailored for media organizations. 
 
 Features
 --------
