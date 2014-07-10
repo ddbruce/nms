@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   # Application root 
   root to: 'pages#index'
   
-  get '/users/:id/dashboard', to: 'users#dashboard'
   get '/organizations/:id/manage_members', to: 'organizations#manage_members'
   get '/organizations/:id/edit_positions', to: 'organizations#edit_positions'
 
@@ -13,7 +12,11 @@ Rails.application.routes.draw do
                registrations: 'nms_devise/registrations',
                sessions: 'nms_devise/sessions'}
 
-  resources :users 
+  resources :users do 
+    get 'dashboard', to: 'users#dashboard'
+    get 'nms_config', to: 'users#nms_config_options'
+  end
+
   
   resources :organizations do
     post '/organizations/:organization_id/memberships/:id' => 'memberships#leadership_status'

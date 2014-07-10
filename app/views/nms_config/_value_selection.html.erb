@@ -1,0 +1,5 @@
+<%= if nc.selection_type == "select"
+      options = nc.reference_model.constantize.all 
+      select_tag nc.key, options_from_collection_for_select(options, :id, :title)
+    end
+%>

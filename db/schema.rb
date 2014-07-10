@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140708213044) do
+ActiveRecord::Schema.define(version: 20140710001435) do
 
   create_table "articles", force: true do |t|
     t.datetime "created_at"
@@ -54,6 +54,9 @@ ActiveRecord::Schema.define(version: 20140708213044) do
     t.datetime "updated_at"
     t.string   "key"
     t.string   "value"
+    t.boolean  "requires_admin",  default: true, null: false
+    t.string   "reference_model"
+    t.string   "selection_type"
   end
 
   create_table "organizations", force: true do |t|
