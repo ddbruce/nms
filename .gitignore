@@ -17,3 +17,6 @@
 
 # Ignore file uploads from CarrierWave gem
 /public/uploads/*
+
+# Ignore Sublime project files
+*.sublime*
