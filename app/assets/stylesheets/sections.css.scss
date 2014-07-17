@@ -1,3 +1,31 @@
 // Place all the styles related to the sections controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.sections-headline {
+	font-family: "Source Sans Pro";
+	font-weight: 900;
+	font-size: 36px;
+	line-height: 1;
+}
+
+.sections-deck {
+	font-family: "Source Sans Pro";
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 1;
+	margin-top: 5px;
+}
+
+.sections-byline {
+	margin-top: 10px;
+}
+
+.sections-body {
+	//margin-top: 5px;
+
+	p {
+		text-indent: 1.5em;
+	}
+}

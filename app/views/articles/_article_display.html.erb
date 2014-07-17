@@ -1,11 +1,14 @@
-<h1 class="sections-headline">
-  <%= article.headline %>
-</h1>
-<br />
-<h3 class="sections-deck">
-  <%= article.deck %>
-</h3>
-<br />
-<p class="sections-body">
-  <%= article.bodytext.html_safe %>
-</p>
+<article>
+	<div class="sections-headline">
+		<%= article.headline %>
+	</div>
+	<div class="sections-deck">
+		<%= article.deck %>
+	</div>
+	<div class="sections-byline">
+		By <a href="/users/dan-bruce">Dan Bruce</a>, Senior Reporter
+	</div>
+	<div class="sections-body">
+		<%= article.bodytext.html_safe %>
+	</div>
+</article>
