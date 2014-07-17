@@ -29,3 +29,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'font-awesome-sass'
 
 gem 'therubyracer'
+
+#compass
+gem 'compass-rails'

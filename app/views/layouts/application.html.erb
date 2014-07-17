@@ -11,12 +11,14 @@
 </head>
 <body>
   <main role="main">
-    <div class="container">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Page header -->
+        <%= render partial: "layouts/header" %>
+      </div>
       <div class="content">
         <div class="row">
           <div class="span12">
-            <!-- Page header -->
-            <%= render partial: "layouts/header" %>
             <!-- Flash messages -->
             <%= render partial: "layouts/messages" %>
             <!-- Page content -->

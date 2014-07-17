@@ -51,20 +51,20 @@ Poly red: #d81e05
 */
 
 body {
-  font-family: "Open Sans","Helvetica Neue","Helvetica",sans-serif;
+	font-family: "Open Sans","Helvetica Neue","Helvetica",sans-serif;
 }
 
 .polyred {
-  color: $polyred;
+	color: $polyred;
 }
 
 .polyreddarker {
- color: $polyreddarker;
+	color: $polyreddarker;
 }
 
 .space1em {
-  margin-left: .5em;
-  margin-right: .5em;
+	margin-left: .5em;
+	margin-right: .5em;
 }
 
 #kc {
@@ -102,7 +102,7 @@ body {
 
 a:link {
 	color: #d81e05;
-  text-decoration: none;
+	text-decoration: none;
 }
 
 a:visited {
@@ -119,13 +119,43 @@ a:hover {
 }
 
 #shell {
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .button_to {
-  float: left;
-  padding-right: 5px;
+	float: left;
+	padding-right: 5px;
 }
 
+input[type=text], input[type=password], input[type=email], textarea {
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	padding: 3px 0px 3px 3px;
+	margin: 5px 1px 3px 0px;
+	border: 1px solid #DDDDDD;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, textarea:focus {
+	box-shadow: 0 0 5px #d81e05;
+	padding: 3px 0px 3px 3px;
+	margin: 5px 1px 3px 0px;
+	border: 1px solid #d81e05;
+}
+
+input[type=submit] {
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+
+}
+
+
+input[type=submit]:focus {
+	box-shadow: 0 0 5px #d81e05;
+}
