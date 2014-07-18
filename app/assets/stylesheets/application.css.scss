@@ -50,6 +50,12 @@ Poly red: #d81e05
 
 */
 
+@media only screen and (max-device-width: 480px){
+	.kill-mobile {
+		display: none !important;
+	}
+}
+
 body {
 	font-family: "Open Sans","Helvetica Neue","Helvetica",sans-serif;
 }
