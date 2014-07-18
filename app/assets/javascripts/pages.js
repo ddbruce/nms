@@ -10,3 +10,22 @@ function run(id) {
 $( document ).ready(function() {
 	run('#news');
 });
+
+$(function(){
+	var shrinkHeader = 50;
+	$(window).scroll(function() {
+		var scroll = getCurrentScroll();
+		if ( scroll >= shrinkHeader ) {
+			$('.logo').addClass('logoshrink')
+			$('.header-row-1').addClass('headershrink');
+		}
+		else {
+			$('.logo').removeClass('logoshrink')
+			$('.header-row-1').removeClass('headershrink');
+		}
+	});
+
+	function getCurrentScroll() {
+		return window.pageYOffset || document.documentElement.scrollTop;
+	}
+});

@@ -12,31 +12,49 @@ header {
   background-color: $polyreddarker;
 }
 
-#header-row-1 {
+.header-row-1 {
   padding: 1em 0;
   @include transition-property(all);
-  @include transition-duration(.3s);
+  @include transition-duration(.7s);
+  @include transition-timing-function(ease-in);
+}
+
+.header-row-1.headershrink {
+  padding: 5px 0;
+  height: 60px;
+  @include transition-property(all);
+  @include transition-duration(.7s);
+  @include transition-timing-function(ease-in);
+}
+
+.logo {
+  height: 86px;
+  text-align: center;
+  @include transition-property(all);
+  @include transition-duration(.7s);
   @include transition-timing-function(ease-in-out);
 }
 
-.headershrink {
-  
+.logo.logoshrink {
+  height: 50px;
+  @include transition-property(all);
+  @include transition-duration(.7s);
+  @include transition-timing-function(ease-in-out);
 }
 
 .content {
-  margin-top: 255px;
+  margin-top: 200px;
 }
 
 .center {
   margin-right: auto;
   margin-left: auto;
   text-align: center;
+  @include transition-property(all);
+  @include transition-duration(.7s);
+  @include transition-timing-function(ease-in);
 }
 
-#logo {
-  max-width: 400px;
-  text-align: center;
-}
 
 #connect-buttons {
   word-spacing: 5px;
