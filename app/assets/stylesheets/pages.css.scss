@@ -3,8 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import "variables";
-@import "compass/css3";
-
+@import "compass/css3/";
 
 header {
   position: fixed;
@@ -15,7 +14,13 @@ header {
 
 #header-row-1 {
   padding: 1em 0;
-  height: 113px;
+  @include transition-property(all);
+  @include transition-duration(.3s);
+  @include transition-timing-function(ease-in-out);
+}
+
+.headershrink {
+  
 }
 
 .content {

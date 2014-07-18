@@ -22,7 +22,7 @@
    sodipodi:docname="mast.svg"><metadata
    id="metadata3247"><rdf:RDF><cc:Work
        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
    id="defs3245" /><sodipodi:namedview
    pagecolor="#ffffff"
    bordercolor="#666666"
@@ -37,7 +37,7 @@
    id="namedview3243"
    showgrid="false"
    inkscape:zoom="0.99264706"
-   inkscape:cx="219.11111"
+   inkscape:cx="223.14073"
    inkscape:cy="95.722222"
    inkscape:window-x="0"
    inkscape:window-y="31"
@@ -88,16 +88,7 @@
    fill="#ADB0B2"
    points="305.388,24.131 305.28,24.163 305.28,24.983 305.388,24.95 "
    id="polyline3187" />
-<line
-   fill="none"
-   stroke="#000000"
-   stroke-width="0.412"
-   x1="130.759"
-   y1="24.543"
-   x2="152.417"
-   y2="24.543"
-   id="line3189"
-   style="fill:#f9f9f9;stroke:#fafafa;stroke-opacity:1" />
+
 <polyline
    points="36.679,23.402 36.679,29.058 34.554,29.058 34.554,23.402 33.828,23.402 33.828,21.605 34.554,21.605   34.554,19.086 36.679,19.086 36.679,21.605 37.982,21.605 37.982,23.402 36.679,23.402 "
    id="polyline3191"
@@ -215,11 +206,5 @@
    points="255.195,7.315 243.513,21.884 243.513,40.85 234.712,40.85 234.712,41.85 234.712,43.627   234.712,50.902 243.513,50.902 243.513,51.902 243.513,90.729 244.513,90.729 254.991,90.729 254.991,50.902 263.79,50.902   263.79,40.85 255.203,40.85 "
    id="polygon3239"
    style="fill:#fafafa;fill-opacity:1" />
-<path
-   fill="none"
-   stroke="#000000"
-   stroke-width="0.412"
-   d="M206.25,103.377h369.966 M48.185,103.486h133.854 M527.083,24.543  h49.109 M397.75,24.543h104.315 M261.5,24.543h114.792 M173.25,24.543h65.375"
-   id="path3241"
-   style="fill:#f9f9f9;stroke:#fafafa;stroke-opacity:1" />
+
 </svg>
