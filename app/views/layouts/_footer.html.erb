@@ -1,20 +1,12 @@
-<div id="footer">
-
+<footer>
   <%= link_to "Home", "/" %> |
-
   <%= link_to "Contact", "/" %> | 
   <%= link_to "Advertise", "/" %> |
-
   <% if user_signed_in? %>
-
     <%= link_to "Dashboard" , user_dashboard_path(current_user) %> | 
     <%= link_to "Profile", user_path(current_user) %> | 
     <%= link_to "Log out", destroy_user_session_path %> 
-
   <% else %>
-
     <%= link_to "Log in", new_user_session_path %> 
-
   <% end %>
-
-</div>
+</footer>
