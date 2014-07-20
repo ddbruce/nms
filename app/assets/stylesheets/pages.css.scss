@@ -153,7 +153,7 @@ background-image: url(image_path('site/bg.png'));
 .main-headline {
   font-family: "Source Sans Pro",sans-serif;
   font-weight: 900;
-  font-size: 30px;	
+  font-size: 36px;	
   text-align: justify;
   color: black;
   line-height: 1;
@@ -203,4 +203,8 @@ background-image: url(image_path('site/bg.png'));
 
 .main-readmore {
   text-align: right;
+}
+
+.main-uhead {
+  margin-top: 7px;
 }
