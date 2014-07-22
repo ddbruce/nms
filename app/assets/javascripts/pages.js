@@ -8,7 +8,7 @@ function run(id) {
 }
 
 $( document ).ready(function() {
-	run('#news');
+	run('#news-0');
 });
 
 $(function(){

@@ -2,9 +2,9 @@
   <div class="header-row-1 row">
     <div class="col-md-6 col-xs-12">
       <div class="center">
-        <a href="/">
+        <%= link_to root_url, "data-no-turbolink" => true do %>
           <%= image_tag "site/mast.svg", alt: "poly mast", class: "logo" %>
-        </a>
+        <% end %>
       </div>
     </div>
     <div id="connect-buttons" class="col-md-6 col-xs-12 center kill-mobile">
