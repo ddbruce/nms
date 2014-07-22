@@ -64,6 +64,14 @@ body {
 	font-family: "Open Sans","Helvetica Neue","Helvetica",sans-serif;
 }
 
+blockquote {
+	font-family: "Droid Serif","Palatino",serif;
+	padding-left: 1em;
+	border-left: 5px solid #fdd;
+	font-size: 14px;
+	margin: 2px 0;
+}
+
 .polyred {
 	color: $polyred;
 }
