@@ -138,14 +138,6 @@ background-image: url(image_path('site/bg.png'));
   }
 }
 
-#main {
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  height: 500px;
-}
-
 .main-item {
   position: absolute;
   min-height: 400px;
@@ -161,7 +153,7 @@ background-image: url(image_path('site/bg.png'));
 .main-headline {
   font-family: "Source Sans Pro",sans-serif;
   font-weight: 900;
-  font-size: 30px;	
+  font-size: 36px;	
   text-align: justify;
   color: black;
   line-height: 1;
@@ -178,10 +170,8 @@ background-image: url(image_path('site/bg.png'));
 
 
 .main-photo {
-  width: 60%;
   display: inline-block;
   vertical-align: top;
-  margin: 0 1em 0 0;
 
   img {
     width: 100%;
@@ -213,4 +203,8 @@ background-image: url(image_path('site/bg.png'));
 
 .main-readmore {
   text-align: right;
+}
+
+.main-uhead {
+  margin-top: 7px;
 }

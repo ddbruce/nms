@@ -56,6 +56,10 @@ Poly red: #d81e05
 	}
 }
 
+.nopadding {
+	padding: 0;
+}
+
 body {
 	font-family: "Open Sans","Helvetica Neue","Helvetica",sans-serif;
 }
@@ -119,9 +123,30 @@ a:hover {
 	color: #a61704;
 }
 
-#footer {
+footer {
+	position: fixed;
+	bottom: 0;
 	text-align: center;
-	margin-bottom: 1em;
+	background-color: $polyreddarker;
+	color: white;
+	width: 100%;
+	padding: .5em;
+
+	a {
+		color: white;
+
+		&:active {
+			color: white;
+		}
+
+		&:visited {
+			color: white;
+		}
+
+		&:hover {
+			color: #ddd;
+		}
+	}
 }
 
 #shell {
