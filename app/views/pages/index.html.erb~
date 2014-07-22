@@ -27,7 +27,7 @@
 					</div>
 				</div>
 				<div class="main-text col-md-3">
-					<%= article.bodytext.split(" ")[0..50].join(" ").html_safe %> ... 
+					<%= article.bodytext.split(" ")[0..90].join(" ").html_safe %> ... 
 					<div class="main-readmore">
 						<%= link_to "Read more...", article %>
 					</div>
