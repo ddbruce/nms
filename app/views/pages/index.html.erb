@@ -1,4 +1,37 @@
 <div id="frontpagecontent">
+	<% @articles.each do |article| %>
+	<div id="main">
+		<div id="<%= "news-#{article.id}" %>" data-next="<%= "news-#{article.id + 1}" %>" class="main-item">
+			<div class="main-headline">
+				<%= article.headline %>
+			</div>
+			<div class="main-deck">
+				<%= article.deck %>
+			</div>
+			<div class="main-content">
+				<div class="main-photo">
+					<img src="http://upload.wikimedia.org/wikipedia/commons/b/b3/Various_grains.jpg" alt="this photo"></img>
+					<div class="main-photo-byline">
+						<%= article.user %>/<i><%= article.The Polytechnic %></i>
+					</div>
+					<div class="main-photo-caption">
+						A scientific survey found that, although this bread looks pretty darn tasty, the NMS developers aren't competent individuals.
+					</div>
+				</div>
+				<div class="main-text">
+					<%= article.bodytext %>
+					<div class="main-readmore">
+						<%= link_to "Ream more...", article %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<% end %>
+</div>
+
+<!--
+<div id="frontpagecontent">
 	<div id="main">
 		<div id="news" data-next="#features" class="main-item">
 			<div class="main-headline">
@@ -52,3 +85,4 @@
 
 	</div>
 </div>
+-->
