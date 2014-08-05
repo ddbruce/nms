@@ -38,6 +38,8 @@
         <%= f.password_field :password_confirmation %>
       </div>
       
+      <%= f.hidden_field :is_active, value: true %>
+
       <br />
       <div>
         <%= f.submit "Sign up" %>

@@ -5,8 +5,24 @@ class MembershipsController < ApplicationController
   end
 
   def create
+    organization = Organization.find(params[:organization_id])
+
     membership = Membership.new(membership_params)
     membership.organization_id = params[:organization_id]
+
+    # Set membership approval status
+    #
+    # System administrators: auto-approve
+    if current_user.is_admin?
+      membership.approval_status = 1
+    # Group leaders: auto-approve only if adding to this organization
+    elsif current_user.is_organization_leader?(organization)
+      membership.approval_status = 1
+    # Basic user: approval pending from system admin or organization leader
+    else
+      membership.approval_status = 0
+    end
+
     membership.save
 
     redirect_to organization_path(params[:organization_id])

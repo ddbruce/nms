@@ -1,4 +1,6 @@
+<% page_title "#{@section.title} | The Rensselaer Polytechnic" %>
+
 <% @articles.each do |article| %>
-  <%= render partial: "articles/article_display", locals: { article: article } %>
+  <%= render partial: "sections/article_display", locals: { article: article } %>
   <br /> <hr /> <br />
 <% end %>

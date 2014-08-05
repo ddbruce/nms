@@ -17,6 +17,7 @@ class OrganizationsController < ApplicationController
     @organization = Organization.find(params[:id])
     @memberships = Membership.where(organization_id: @organization.id, approval_status: 1)
     @positions = @organization.positions
+    
     @requests = Membership.where(organization_id: @organization.id, approval_status: 0)
     @rejections = Membership.where(organization_id: @organization.id, approval_status: 2)
 
