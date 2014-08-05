@@ -1,14 +1,7 @@
-<!-- Article rendered under article#show page -->
-
-<% if can_edit_article?(article) %>
-	<div class="pull-right">
-		<%= link_to "Edit", edit_article_path(article), :class => "btn btn-default" %>
-	</div>
-<% end %>
-
+<!-- Article rendered under sections page -->
 <article>
 	<div class="sections-headline">
-		<%= article.headline %>
+		<%= link_to article.headline, article %>
 	</div>
 	<div class="sections-deck">
 		<%= article.deck %>

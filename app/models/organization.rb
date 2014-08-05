@@ -7,6 +7,9 @@ class Organization < ActiveRecord::Base
 
   validates :title, presence: true
 
+  def leaders
+    memberships.where(is_leader: true)
+  end
 
   def self.sections_for_select(user)
     organizations = Array.new

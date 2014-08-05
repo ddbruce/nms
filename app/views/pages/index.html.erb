@@ -19,7 +19,10 @@
 					<div class="main-photo">
 						<img src="http://upload.wikimedia.org/wikipedia/commons/b/b3/Various_grains.jpg" alt="this photo" />
 						<div class="main-photo-byline">
-							<%= article.user.name %>/<i><%= article.organization.title %></i>
+							<%= article.user.name %>
+							<% if article.organization %>
+								/<i><%article.organization.title%></i>
+							<% end %>
 						</div>
 						<div class="main-photo-caption">
 							PHOTO CAPTION WILL BE INCLUDED here, but I'll type a really long sentence so it will look like it probably will when it's done. Sorry about those capital letters...it's just our style.
@@ -37,9 +40,3 @@
 	</div>
 	<% 	article_count += 1 %>
 <% end %>
-
-<!-- <div class="col-md-2">
-	<div class="row">
-		<img src="http://i.imgur.com/IloIwja.jpg" class="sm-photo" />
-	</div>
-</div> -->

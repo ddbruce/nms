@@ -2,7 +2,13 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>The Rensselaer Polytechnic | Serving the RPI community since 1885</title>
+  <title>
+    <% if content_for?(:page_title) %>
+      <%= yield(:page_title) %>
+    <% else %>
+      The Rensselaer Polytechnic | Serving the Rensselaer community since 1885
+    <% end %>
+  </title>
   <%= favicon_link_tag 'favicon.ico' %>
   <%= stylesheet_link_tag "application.css" %>
   <link rel="icon" type="image/png" href="../../assets/images/favicon.png">

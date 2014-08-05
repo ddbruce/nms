@@ -25,6 +25,13 @@ class User < ActiveRecord::Base
     organizations
   end
 
+  def is_organization_leader?(organization)
+    mem = memberships.find_by_organization_id(organization.id)
+    if mem.is_leader == true
+      return true
+    end
+  end
+
   def self.not_in_organization(organization)
     memberships = organization.memberships
 
@@ -39,5 +46,6 @@ class User < ActiveRecord::Base
 
     results
   end
+
 
 end
