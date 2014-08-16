@@ -17,7 +17,6 @@ class Media < ActiveRecord::Base
           media_id: photo.id,
           user_id: user.id
         )
-
         media.save
       end
 
