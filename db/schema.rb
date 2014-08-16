@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140710001435) do
+ActiveRecord::Schema.define(version: 20140816030458) do
 
   create_table "articles", force: true do |t|
     t.datetime "created_at"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20140710001435) do
     t.integer  "media_id"
     t.integer  "user_id"
     t.integer  "organization_id"
+    t.integer  "article_id"
   end
 
   create_table "media_types", force: true do |t|

@@ -17,7 +17,7 @@
 			<div class="row">
 				<div class="col-md-7 nopadding main-uhead">
 					<div class="main-photo">
-						<img src="http://upload.wikimedia.org/wikipedia/commons/b/b3/Various_grains.jpg" alt="this photo" />
+						<%= image_tag Photo.find(article.medias).image %>
 						<div class="main-photo-byline">
 							<%= article.user.name %>
 							<% if article.organization %>
