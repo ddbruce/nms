@@ -1,0 +1,27 @@
+<header>
+  <div class="header-row-1-sm row">
+    <div class="col-md-6 col-xs-12">
+      <div class="center">
+        <%= link_to root_url, "data-no-turbolink" => true do %>
+          <%= image_tag "site/mast.svg", alt: "poly mast", class: "logo-sm" %>
+        <% end %>
+      </div>
+    </div>
+    <div id="connect-buttons" class="col-md-6 col-xs-12 center kill-mobile">
+      <div>
+        <a href="http://twitter.com/RPIPoly"><i class="fa fa-twitter-square fa-3x"></i></a>
+        <a href="http://facebook.com/thepolytechnic"><i class="fa fa-facebook-square fa-3x"></i></a>
+        <a href="http://reddit.com/u/ThePolytechnic"><i class="fa fa-reddit-square fa-3x"></i></a>
+        <a href="http://youtube.com/RPIPoly"><i class="fa fa-youtube-square fa-3x"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div id="sections">
+        <%= render partial: "layouts/news_sections" %>
+      </div>
+    </div>
+  </div>
+<!-- add search! -->
+</header>
