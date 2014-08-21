@@ -1,15 +1,12 @@
 	<%= render partial: "dashboard_controls" %>
 
-<hr />
+	<hr />
 
-<div class="row">
-	<div class="col-md-8 col-md-offset-2">
-		<%= render partial: "dashboard_organizations" %>
+	<div class="row">
+		<div class="col-md-4 col-md-offset-2" style="padding-right:20px; border-right: 1px solid #eee;">
+			<%= render partial: "dashboard_organizations" %>
+		</div>
+		<div class="col-md-4">
+			<%= render partial: "dashboard_articles" %>
+		</div>
 	</div>
-</div> 
-<br />
-<div class="row">
-	<div class="col-md-8 col-md-offset-2">
-		<%= render partial: "dashboard_articles" %>
-	</div>
-</div>
