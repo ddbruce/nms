@@ -17,16 +17,18 @@
 			<div class="row">
 				<div class="col-md-7 nopadding main-uhead">
 					<div class="main-photo">
-						<%= image_tag Photo.find(article.medias).image %>
-						<div class="main-photo-byline">
-							<%= article.user.name %>
-							<% if article.organization %>
-								/<i><%article.organization.title%></i>
-							<% end %>
-						</div>
-						<div class="main-photo-caption">
-							PHOTO CAPTION WILL BE INCLUDED here, but I'll type a really long sentence so it will look like it probably will when it's done. Sorry about those capital letters...it's just our style.
-						</div>
+						<% if !article.medias.nil? %>
+							<%= image_tag Photo.find(article.medias).image %>
+							<div class="main-photo-byline">
+								<%= article.user.name %>
+								<% if article.organization %>
+									/<i><%article.organization.title%></i>
+								<% end %>
+							</div>
+							<div class="main-photo-caption">
+								PHOTO CAPTION WILL BE INCLUDED here, but I'll type a really long sentence so it will look like it probably will when it's done. Sorry about those capital letters...it's just our style.
+							</div>
+						<% end %>
 					</div>
 				</div>
 				<div class="main-text col-md-3">
