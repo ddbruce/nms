@@ -1,40 +1,40 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- *= require font-awesome
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any styles
+* defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+* file per style scope.
+*
+*= require_tree .
+*= require_self
+*= require font-awesome
+*/
 
 
- /* ================================================= */
- /*                                                   */
- /*             STYLE OVERRIDES GO HERE               */
- /*																										*/
- /* https://github.com/twbs/bootstrap-sass            */
- /* http://getbootstrap.com/customize/#less-variables */
- /*                                                   */
- /* ================================================= */
+/* ================================================= */
+/*                                                   */
+/*             STYLE OVERRIDES GO HERE               */
+/*																										*/
+/* https://github.com/twbs/bootstrap-sass            */
+/* http://getbootstrap.com/customize/#less-variables */
+/*                                                   */
+/* ================================================= */
 
- @import "variables";
- @import "bootstrap";
- @import "bootstrap/theme";
+@import "variables";
+@import "bootstrap";
+@import "bootstrap/theme";
 
- html, body, h1, h2, h3, h4, h5, h6 {
- 	margin: 0;
- 	padding: 0;
- }
+html, body, h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
 
- /*fonts used in body*/
+/*fonts used in body*/
 /*
 font-family: 'Open Sans', sans-serif;				<--- body text (contains 400 and 700 weights in both straight and italics)
 font-family: 'Source Sans Pro', sans-serif;	<--- headlines, decks (contains 600 and 900 weights in both straight and italics)

@@ -19,7 +19,7 @@ header {
   @include transition-timing-function(ease-in);
 }
 
-.header-row-1.headershrink {
+.header-row-1.headershrink, .header-row-1-sm {
   padding: 5px 0;
   height: 60px;
   @include transition-property(all);
@@ -35,7 +35,7 @@ header {
   @include transition-timing-function(ease-in-out);
 }
 
-.logo.logoshrink {
+.logo.logoshrink, .logo-sm {
   height: 50px;
   @include transition-property(all);
   @include transition-duration(.7s);
