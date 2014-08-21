@@ -3,43 +3,48 @@
     <li><%= link_to "Dashboard", user_dashboard_path(current_user) %></li>
     <li class="active"> New Article </li>
   </ol>
-
-  <div class="panel-body" style="text-align: center">
-    <%= form_for @article, action: "create" do |f| %>
+  <div class="row">
+    <div class="col-md-3 col-md-offset-2" style="text-align: center">
+      <%= form_for @article, action: "create" do |f| %>
       <p>
         <h3> <%= f.label :headline %> </h3>
-        <%= f.text_field :headline, style: "width: 500px" %>
+        <%= f.text_field :headline %>
       </p>
 
       <p>
         <h3> <%= f.label :deck %> </h3>
-        <%= f.text_area :deck, style: "width: 500px;" %>
+        <%= f.text_area :deck %>
       </p>
-
+    </div>
+    <div class="col-md-5">
       <p>
         <h3> <%= f.label :bodytext %> </h3>
-        <%= f.text_area :bodytext, style: "width: 500px; height: 500px;" %>
+        <%= f.text_area :bodytext %>
       </p>
-
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
       <% if !@organizations.nil? %>
-        <p> 
-          <h3> <%= f.label :publishing_organization %> </h3>
-          <%= f.select :organization_id, @organizations, { include_blank: true } %> 
-        </p>
+      <p> 
+        <h3> <%= f.label :publishing_organization %> </h3>
+        <%= f.select :organization_id, @organizations, { include_blank: true } %> 
+      </p>
       <% end %>
-
+    </div>
+    <div class="col-md-4">
       <% if !@sections.nil? %>
-        <p>
-          <h3> <%= f.label :section %> </h3> 
-          <%= f.select :section_id, @sections, {include_blank: true} %>
-        </p>
+      <p>
+        <h3> <%= f.label :section %> </h3> 
+        <%= f.select :section_id, @sections, {include_blank: true} %>
+      </p>
       <% end %>
-
+    </div>
+    <div class="row">
       <p> 
         <%= f.submit "Create Article" %>
       </p>
-
+    </div>
     <% end %>
   </div>
-
-</div> 
+</div>
