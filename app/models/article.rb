@@ -7,7 +7,7 @@ class Article < ActiveRecord::Base
   has_many :medias
 
   def photos
-  	article.medias.where(media_type: 1, article_id: id).sample
+  	medias.where(media_type: 1, article_id: id).sample
   end
 
 end
