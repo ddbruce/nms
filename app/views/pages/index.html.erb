@@ -18,7 +18,7 @@
 				<div class="col-md-7 nopadding main-uhead">
 					<div class="main-photo">
 						<% if !article.medias.nil? %>
-							<%= image_tag Photo.find(article.medias).image %>
+							<%= image_tag Photo.find(article.photos.media_id).image %>
 							<div class="main-photo-byline">
 								<%= article.user.name %>
 								<% if article.organization %>
