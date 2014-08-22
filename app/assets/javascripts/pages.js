@@ -9,6 +9,7 @@ function run(id) {
 
 $( document ).ready(function() {
 	run('#news-0');
+	topSpacing();
 });
 
 $(function(){
@@ -29,3 +30,7 @@ $(function(){
 		return window.pageYOffset || document.documentElement.scrollTop;
 	}
 });
+function topSpacing() {
+	var h = $("#header").height();
+	$("#header-spacer").height(h+10);
+}

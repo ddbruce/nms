@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <title>
     <% if content_for?(:page_title) %>
-      <%= yield(:page_title) %>
+    <%= yield(:page_title) %>
     <% else %>
-      The Rensselaer Polytechnic | Serving the Rensselaer community since 1885
+    The Rensselaer Polytechnic | Serving the Rensselaer community since 1885
     <% end %>
   </title>
   <%= favicon_link_tag 'favicon.ico' %>
@@ -20,9 +20,12 @@
     <div class="container-fluid">
       <div class="row">
         <!-- Page header -->
-        <%= render partial: "layouts/header_small" %>
+        <%= render partial: "layouts/header" %>
       </div>
       <div class="content">
+        <div class="row">
+          <div id="header-spacer"></div>
+        </div>
         <div class="row">
           <div class="span12">
             <!-- Flash messages -->
