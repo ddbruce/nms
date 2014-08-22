@@ -1,6 +1,10 @@
 <% page_title "#{@section.title} | The Rensselaer Polytechnic" %>
 
-<% @articles.each do |article| %>
-  <%= render partial: "sections/article_display", locals: { article: article } %>
-  <br /> <hr /> <br />
-<% end %>
+<div class="row">
+	<div class="col-xs-10 col-xs-offset-1">
+		<% @articles.each do |article| %>
+		<%= render partial: "sections/article_display", locals: { article: article } %>
+		<br /> <hr /> <br />
+		<% end %>
+	</div>
+</div>

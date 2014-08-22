@@ -1,22 +1,24 @@
 <!-- Article rendered under article#show page -->
 
-<% if can_edit_article?(article) %>
-	<div class="pull-right">
-		<%= link_to "Edit", edit_article_path(article), :class => "btn btn-default" %>
-	</div>
-<% end %>
+<div class="row">
+	<div class="col-xs-10 col-xs-offset-1">
+		<% if can_edit_article?(article) %>
+		<%= link_to "Edit", edit_article_path(article), :style => "font-size: 18px; font-weight: 700;" %>
+		<% end %>
 
-<article>
-	<div class="sections-headline">
-		<%= article.headline %>
+		<article>
+			<div class="sections-headline">
+				<%= article.headline %>
+			</div>
+			<div class="sections-deck">
+				<%= article.deck %>
+			</div>
+			<div class="sections-byline">
+				By <a href="/users/dan-bruce">Dan Bruce</a>, Senior Reporter
+			</div>
+			<div class="sections-body">
+				<%= article.bodytext.html_safe %>
+			</div>
+		</article>
 	</div>
-	<div class="sections-deck">
-		<%= article.deck %>
-	</div>
-	<div class="sections-byline">
-		By <a href="/users/dan-bruce">Dan Bruce</a>, Senior Reporter
-	</div>
-	<div class="sections-body">
-		<%= article.bodytext.html_safe %>
-	</div>
-</article>
+</div>

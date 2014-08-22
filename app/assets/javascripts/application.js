@@ -16,3 +16,12 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+
+$( document ).ready(function() {
+	topSpacing();
+});
+
+function topSpacing() {
+	var h = $("#header").height();
+	$("#header-spacer").height(h+10);
+}

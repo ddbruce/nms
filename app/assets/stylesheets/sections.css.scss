@@ -2,12 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "variables";
 
 .sections-headline {
 	font-family: "Source Sans Pro";
 	font-weight: 900;
 	font-size: 36px;
 	line-height: 1;
+
+	a {
+		color: black !important;
+
+		&:hover {
+			color: $polyreddarker !important;
+		}
+	}
 }
 
 .sections-deck {
