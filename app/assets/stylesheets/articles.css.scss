@@ -4,11 +4,31 @@
 
 
 .article_search {
-  text-align: center;
+	text-align: center;
 }
 
 .article_search_input {
-  width: 65%;
-  height: 50px;
-  font-size: 24px;
+	width: 65%;
+	height: 50px;
+	font-size: 24px;
+}
+
+.padding1em {
+
+	div {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+}
+
+#article_headline, #article_deck, #article_bodytext, #article_organization_id, #article_section_id {
+	width: 100%;
+}
+
+#article_create {
+	text-align: center;
+}
+
+#create {
+	width: 200px;
 }

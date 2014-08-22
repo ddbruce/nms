@@ -3,7 +3,7 @@
     <li><%= link_to "Dashboard", user_dashboard_path(current_user) %></li>
     <li class="active"> New Article </li>
   </ol>
-  <div class="row">
+  <div class="row .padding1em">
     <div class="col-md-3 col-md-offset-2" style="text-align: center">
       <%= form_for @article, action: "create" do |f| %>
       <p>
@@ -19,12 +19,12 @@
     <div class="col-md-5">
       <p>
         <h3> <%= f.label :bodytext %> </h3>
-        <%= f.text_area :bodytext %>
+        <%= f.text_area :bodytext, :style => 'height: 120px;' %>
       </p>
     </div>
   </div>
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 col-md-offset-2">
       <% if !@organizations.nil? %>
       <p> 
         <h3> <%= f.label :publishing_organization %> </h3>
@@ -41,9 +41,11 @@
       <% end %>
     </div>
     <div class="row">
-      <p> 
-        <%= f.submit "Create Article" %>
-      </p>
+      <div class="col-md-2 col-md-offset-5" id="article_create">
+        <p> 
+          <%= f.submit "Create Article" :id => "create" %>
+        </p>
+      </div>
     </div>
     <% end %>
   </div>
