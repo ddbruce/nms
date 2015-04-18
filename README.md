@@ -23,4 +23,4 @@ The long term goal is to create a simple and useful solution maintaining any sch
 
 Developers
 ----------
-This site is a project of the Web Technologies Group, an agency of the Rensselaer Student Senate. The work is done through the Rensselaer Center for Open Source Software, also known as [RCOS](rcos.rpi.edu), by Editor in Chief Dan Bruce '16 and Web Tech Chairman Gabe Perez '16.
+The work is done through the Rensselaer Center for Open Source Software, also known as [RCOS](rcos.rpi.edu), by Editor in Chief Dan Bruce '16 and Web Tech Chairman Gabe Perez '16.
